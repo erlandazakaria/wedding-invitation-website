@@ -1,22 +1,38 @@
 import { useState, useEffect, useRef } from 'react';
-import { Box, Typography, Button, ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import { Box, Typography, Button, ThemeProvider, createTheme } from '@mui/material';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BottomNav from './BottomNavigation';
 import HomeSection from './sections/HomeSection';
 import './App.css';
 
-const theme = createTheme();
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+      custm: 475
+    }
+  }
+});
 
 
 // responsive text
 theme.typography.testText = {
   fontFamily: "Playball",
   fontSize: "2.2rem",
+  color:"#9d7a5b",
   "@media(min-width: 375px)": {
     fontSize: "2.4rem"
   },
   "@media(min-width: 540px)": {
     fontSize: "2.6rem"
+  },
+  "@media(min-width: 900px)": {
+    fontSize: "3.2rem",
+    color: "#AB8144"
   },
   "@media(min-width: 1200px)": {
     fontSize: "4rem"
@@ -69,12 +85,26 @@ theme.typography.weInviteYou = {
   },
   "@media(min-width: 450px)": {
     color: "#fff"
+  },
+  "@media(min-width: 900px)": {
+    color: "#6C6C6C",
+    fontSize: "1.2rem",
+    fontWeight: 200
+  },
+  "@media(min-width: 1200px)": {
+    fontSize: "1.4rem",
   }
 }
 
 theme.typography.saveTheDate = {
   fontFamily: 'Cabin',
-  fontSize: "12px"
+  fontSize: "12px",
+  "@media(min-width: 900px)": {
+    fontSize: "16px"
+  },
+  "@media(min-width: 1200px)": {
+    fontSize: "24px"
+  },
 }
 
 theme.typography.numberAtCountdown = {
@@ -82,14 +112,21 @@ theme.typography.numberAtCountdown = {
   fontFamily: "Roboto Slab",
   lineHeight: "1.4",
   fontSize: "14px",
-  fontWeight: 600
+  fontWeight: 600,
+  "@media(min-width: 900px)": {
+    fontSize: "26px",
+    lineHeight: "1.2",
+  }
 }
 
 theme.typography.dateAtCountdown = {
   color: "#6C6C6C",
   fontFamily: "Merriweather",
   fontSize: "11px",
-  fontWeight: 600
+  fontWeight: 600,
+  "@media(min-width: 900px)": {
+    fontSize: "16px"
+  }
 }
 
 
