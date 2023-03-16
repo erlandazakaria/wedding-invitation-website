@@ -3,6 +3,7 @@ import { Box, Typography, Button, ThemeProvider, createTheme } from '@mui/materi
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BottomNav from './BottomNavigation';
 import HomeSection from './sections/HomeSection';
+import MempelaiSection from './sections/MempelaiSection';
 import './App.css';
 
 const theme = createTheme({
@@ -130,6 +131,8 @@ theme.typography.dateAtCountdown = {
 }
 
 
+
+
 // app container
 
 function App() {  
@@ -143,12 +146,12 @@ function App() {
     setIsMuted(false);
   }
 
-  useEffect(() => {
-    if(isMuted === false) {
-      fixAutoPlay.current.play()  
-    }
-    return
-  },[isMuted])
+  // useEffect(() => {
+  //   if(isMuted === false) {
+  //     fixAutoPlay.current.play()  
+  //   }
+  //   return
+  // },[isMuted])
 
   return (
     <Box style={{margin: 0, padding: 0}}>
@@ -217,7 +220,7 @@ function ContentPage ({theme}) {
   return (
     <Box sx={{boxSizing: "border-box"}}>
       <HomeSection theme={theme} />
-      <Box sx={{height: "100vh"}}>Mempelai section</Box>
+      <MempelaiSection />
       <BottomNav />
     </Box>
   )
