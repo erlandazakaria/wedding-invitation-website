@@ -4,16 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-/* test font-family untuk text tanpa mengurangi rasa hormat */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lepcha&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+/* font-family untuk text tanpa mengurangi rasa hormat */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
 
+/* for " & " text font family */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 /* background color: #FFF7F5 */
 
