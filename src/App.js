@@ -146,12 +146,12 @@ function App() {
     setIsMuted(false);
   }
 
-  useEffect(() => {
-    if(isMuted === false) {
-      fixAutoPlay.current.play()  
-    }
-    return
-  },[isMuted])
+  // useEffect(() => {
+  //   if(isMuted === false) {
+  //     fixAutoPlay.current.play()  
+  //   }
+  //   return
+  // },[isMuted])
 
   return (
     <Box style={{margin: 0, padding: 0}}>
@@ -222,6 +222,7 @@ function ContentPage ({theme}) {
       <HomeSection theme={theme} />
       <MempelaiSection />
       <BottomNav />
+      <Box sx={{height: "50vh"}}>Out Story Section</Box>
     </Box>
   )
 }
