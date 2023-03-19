@@ -1,9 +1,7 @@
-import { Box, ThemeProvider } from '@mui/material';
-function EmptyBox ({ theme, emptyBoxStyles}) {
-    return (
-        <ThemeProvider theme={theme}>
-            <Box sx={emptyBoxStyles}></Box>
-        </ThemeProvider>
+import { Box } from '@mui/material';
+function EmptyBox ({ emptyBoxStyles}) {
+    return (      
+        <Box sx={emptyBoxStyles}></Box>
     )
 }
 

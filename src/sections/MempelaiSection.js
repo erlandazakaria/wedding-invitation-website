@@ -172,13 +172,18 @@ function MempelaiSection () {
                 <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: "4vh", empatLimaPuluh: "3vh", tujuhEnamDelapan: "2vh"}}} />  
                 
                 <ThemeProvider theme={theme}>
-                    <Box sx={{height: {xs: "26vh",tigaTujuhLima: "32vh",empatLimaPuluh: "36vh", limaratus: "42vh",sm: "48vh", tujuhEnamDelapan: "22%"}, width: "100%"}}>
-                        <Box sx={{height: "100%", width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                            <Box sx={{height: "100%", width: "auto"}}>
-                                <img src='./img/content-page/mempelai-section/mempelai-photo-2.webp' style={{height: "100%",width: "auto"}} />
-                            </Box>
-                        </Box>
-                    </Box>    
+                    <Box sx={{
+                        height: {xs: "26vh",tigaTujuhLima: "32vh",empatLimaPuluh: "36vh", limaratus: "42vh",sm: "48vh", tujuhEnamDelapan: "300px"}, 
+                        width: "auto", 
+                        display: "flex", 
+                        justifyContent: "center", 
+                        alignItems: "center", 
+                        margin: "0 auto",
+                    }}>               
+                        <Box sx={{width: "auto",height: "100%"}}>
+                            <img src='./img/content-page/mempelai-section/mempelai-photo-2.webp'style={{ width: "auto",height: "100%"}} />   
+                        </Box>   
+                    </Box>
                 </ThemeProvider>
                 
                 <EmptyBox theme={theme} emptyBoxStyles={{height: "2vh"}} />
