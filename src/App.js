@@ -6,6 +6,7 @@ import HomeSection from './sections/HomeSection';
 import MempelaiSection from './sections/MempelaiSection';
 import './App.css';
 import CeritaKamiSection from './sections/CeritaKamiSection';
+import AcaraSection from './sections/AcaraSection';
 
 const theme = createTheme({
   breakpoints: {
@@ -224,7 +225,8 @@ function ContentPage ({theme}) {
       <MempelaiSection />
       <BottomNav />
       <CeritaKamiSection />
-      <Box sx={{height: "50vh"}}>Akad Nikah</Box>
+      <AcaraSection />
+      <Box sx={{height: "100vh"}}>Galeri</Box>
     </Box>
   )
 }
