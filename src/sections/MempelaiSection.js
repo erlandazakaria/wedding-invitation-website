@@ -140,17 +140,17 @@ function MempelaiSection () {
                 <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
                     <Box>
                         <ThemeProvider theme={theme}>
-                            <Typography variant="namaMempelaiText">Gaby Amandasari, S.S.T., M.A</Typography>    
+                            <Typography variant="namaMempelaiText">Cintya Aulia Putri, S.Pd</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box sx={{width: "98%"}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='anakDariText'>Putri Pertama dari Bapak Imam Idhi Kurniadi, S.E</Typography>    
+                            <Typography variant='anakDariText'>Putri Pertama dari Bapak Suliono</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box sx={{ width: "80%"}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='anakDariText'>& Ibu Indah Sri Handayani, S.E</Typography>    
+                            <Typography variant='anakDariText'>& Ibu Wiwik Puji Astutik S.Pd</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box>
@@ -191,17 +191,17 @@ function MempelaiSection () {
                 <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
                     <Box>
                         <ThemeProvider theme={theme}>
-                            <Typography variant="namaMempelaiText">Erlanda Zakaria, S.S</Typography>    
+                            <Typography variant="namaMempelaiText">Handika, S.Pd</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box sx={{display: "flex",justifyContent: "center",alignItems: "center"}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='anakDariText'>Putra Kedua dari Bapak Suliono</Typography>    
+                            <Typography variant='anakDariText'>Putra  dari Bapak </Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box sx={{ width: "80%"}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='anakDariText'>& Ibu Wiwik Puji Astutik, S.Pd</Typography>    
+                            <Typography variant='anakDariText'>& Ibu , S.Pd</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box>

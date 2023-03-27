@@ -64,21 +64,21 @@ function AcaraSection () {
         {
             akad: [
                 {text: "Akad Nikah", variant: "acaraHeader"},
-                {text: "Kamis, 17 November 2022", variant: "hariDanTanggal"},
-                {text: "Pukul 09.00 WIB", variant: "tempatDanWaktu", haveMargin: true},
-                {text: "Tempat: Kediaman Mempelai Wanita", variant: "tempatDanWaktu"},
-                {text: "Jl. Danau Kerinci Raya F3 16E,", variant: "tempatDanWaktu"},
-                {text: "Sawojajar, Kedungkandang, Kota Malang", variant: "tempatDanWaktu"},
+                {text: "Kamis, 11 Mei 2023", variant: "hariDanTanggal"},
+                {text: "Pukul 08.00 WIB", variant: "tempatDanWaktu", haveMargin: true},
+                {text: "Tempat: Chapel Royal Garden Orchid", variant: "tempatDanWaktu"},
+                {text: "Royal Orchids Garden Hotel & Condominiums", variant: "tempatDanWaktu"},
+                {text: "Jl. Indragiri No.4, Pesanggrahan, Kota Batu", variant: "tempatDanWaktu"},
             ]
         }, 
         {
             resepsi: [
                 {text: "Resepsi", variant: "acaraHeader"},
-                {text: "Sabtu, 19 November 2022", variant: "hariDanTanggal"},
-                {text: "Sesi 1: 10.30 - 12.00", variant: "tempatDanWaktu", haveMarginTop: true},
-                {text: "Sesi 2: 12.00 - 13.30", variant: "tempatDanWaktu", haveMargin: true},
-                {text: "Tempat: Akasia Ballroom Hotel Savana.", variant: "tempatDanWaktu"},
-                {text: "Jl. Letjen Sutoyo No.30, Rampal Celaket, Kec. Klojen, Kota Malang", variant: "tempatDanWaktu"},
+                {text: "Kamis, 11 Mei 2023", variant: "hariDanTanggal"},
+                {text: "Sesi 1: 12.30 - 14.30", variant: "tempatDanWaktu", haveMarginTop: true},
+                {text: "Sesi 2: 14.30 - 16.30", variant: "tempatDanWaktu", haveMargin: true},
+                {text: "Tempat: Arjuna Hall Royal Garden Orchid", variant: "tempatDanWaktu"},
+                {text: "Jl. Indragiri No.4, Pesanggrahan, Kota Batu", variant: "tempatDanWaktu"},
 
             ]
         }

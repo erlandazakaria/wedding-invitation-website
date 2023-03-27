@@ -49,15 +49,15 @@ function CeritaKamiSection () {
     const ceritaText = [
         {
             header: "Awal Bertemu", 
-            content: "Tahun 2019 merupakan tahun dimana kami pertama kali bertemu secara tidak sengaja melalui seorang teman di sebuah stasiun di Surabaya. Kami baru berkenalan beberapa minggu setelah pertemuan pertama tersebut."
+            content: "Tahun 2020 merupakan tahun dimana pertama kali kami bertemu. Kami bertemu sebagai senior dan junior di tempat kerja kami."
         }, 
         {
-            header: "Bertukar Kabar",
-            content: "Pada tahun 2020 dan 2021 kami saling tukar kabar layaknya seorang teman. Hubungan kami berdua juga sempat sangat dekat beberapa bulan dan saling ketertarikan mulai terlihat."
+            header: "Kedekatan",
+            content: "Selama awal bekerja, kami sering bertukar pengetahuan dan mengobrol. Lama-kelamaan kami juga sering pergi berdua sepulang kerja."
         }, 
         {
             header: "Pernikahan",
-            content: "Pada tahun 2022 awal barulah kami saling menyatakan ketertarikan secara langsung, berkomitmen untuk menjalani hidup bersama di dunia dan akhirat. Menjadi andalan satu sama lain, dalam susah maupun senang, selamanya."
+            content: "Pada pertengahan tahun 2022, kami setuju untuk berkomitmen menjalani hubungan yg lebih serius. Akhirnya kami saling mengenalkan keluarga masing-masing dan menentukan hari pernikahan."
         }
     ];
 

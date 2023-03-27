@@ -7,6 +7,7 @@ import MempelaiSection from './sections/MempelaiSection';
 import './App.css';
 import CeritaKamiSection from './sections/CeritaKamiSection';
 import AcaraSection from './sections/AcaraSection';
+import Galeri from './sections/Galeri';
 
 const theme = createTheme({
   breakpoints: {
@@ -148,12 +149,12 @@ function App() {
     setIsMuted(false);
   }
 
-  // useEffect(() => {
-  //   if(isMuted === false) {
-  //     fixAutoPlay.current.play()  
-  //   }
-  //   return
-  // },[isMuted])
+  useEffect(() => {
+    if(isMuted === false) {
+      fixAutoPlay.current.play()  
+    }
+    return
+  },[isMuted])
 
   return (
     <Box style={{margin: 0, padding: 0}}>
@@ -193,7 +194,7 @@ function FrontPage ({ bukaUndanganHandler }) {
             
           {/* could be more simple than this by doing mapping on array that each index have variant, style, and text as key */}
           <ThemeProvider theme={theme}>
-            <Typography variant='testText' style={{ boxSizing: "border-box", color:"#9d7a5b", marginBottom: "1rem"}}>Gaby & Erlanda</Typography>  
+            <Typography variant='testText' style={{ boxSizing: "border-box", color:"#9d7a5b", marginBottom: "1rem"}}>Cintya & Handika</Typography>  
           </ThemeProvider>
           <ThemeProvider theme={theme}>
             <Typography variant='kepadaBapakIbu' style={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "1rem"}}>Kepada Bapak/Ibu/Saudara/i</Typography>
@@ -226,7 +227,8 @@ function ContentPage ({theme}) {
       <BottomNav />
       <CeritaKamiSection />
       <AcaraSection />
-      <Box sx={{height: "100vh"}}>Galeri</Box>
+      <Galeri />
+      <Box sx={{height: "100vh"}}>Protokol Kesehatan</Box>
     </Box>
   )
 }

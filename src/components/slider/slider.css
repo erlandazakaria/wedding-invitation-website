@@ -1,0 +1,29 @@
+
+.swiper {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-slide {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+
