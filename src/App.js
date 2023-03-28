@@ -8,6 +8,7 @@ import './App.css';
 import CeritaKamiSection from './sections/CeritaKamiSection';
 import AcaraSection from './sections/AcaraSection';
 import Galeri from './sections/Galeri';
+import ProtokolKesehatan from './sections/ProtokolKesehatanSection';
 
 const theme = createTheme({
   breakpoints: {
@@ -228,7 +229,7 @@ function ContentPage ({theme}) {
       <CeritaKamiSection />
       <AcaraSection />
       <Galeri />
-      <Box sx={{height: "100vh"}}>Protokol Kesehatan</Box>
+      <ProtokolKesehatan />
     </Box>
   )
 }

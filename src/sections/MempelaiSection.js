@@ -191,17 +191,17 @@ function MempelaiSection () {
                 <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
                     <Box>
                         <ThemeProvider theme={theme}>
-                            <Typography variant="namaMempelaiText">Handika, S.Pd</Typography>    
+                            <Typography variant="namaMempelaiText">Handika Dwiyanto Putra, S.Pd</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box sx={{display: "flex",justifyContent: "center",alignItems: "center"}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='anakDariText'>Putra  dari Bapak </Typography>    
+                            <Typography variant='anakDariText'>Putra  dari Bapak Haryanto</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box sx={{ width: "80%"}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='anakDariText'>& Ibu , S.Pd</Typography>    
+                            <Typography variant='anakDariText'>& Ibu Tri Winarni</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box>

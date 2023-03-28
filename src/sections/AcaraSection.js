@@ -75,8 +75,8 @@ function AcaraSection () {
             resepsi: [
                 {text: "Resepsi", variant: "acaraHeader"},
                 {text: "Kamis, 11 Mei 2023", variant: "hariDanTanggal"},
-                {text: "Sesi 1: 12.30 - 14.30", variant: "tempatDanWaktu", haveMarginTop: true},
-                {text: "Sesi 2: 14.30 - 16.30", variant: "tempatDanWaktu", haveMargin: true},
+                {text: "Sesi 1: 13.00 - 15.00", variant: "tempatDanWaktu", haveMarginTop: true},
+                {text: "Sesi 2: 15.00 - 17.00", variant: "tempatDanWaktu", haveMargin: true},
                 {text: "Tempat: Arjuna Hall Royal Garden Orchid", variant: "tempatDanWaktu"},
                 {text: "Jl. Indragiri No.4, Pesanggrahan, Kota Batu", variant: "tempatDanWaktu"},
 
