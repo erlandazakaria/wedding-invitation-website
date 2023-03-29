@@ -1,13 +1,43 @@
-import { Box, Typography, Grid, createTheme, ThemeProvider } from '@mui/material';
+import { Box, Typography, createTheme, ThemeProvider } from '@mui/material';
 import EmptyBox from '../components/EmptyBox';
+import ProkesIcon from '../components/ProkesIcon';
 
-// const prokesPGN = [
-//    "/img/content-page/protokol-kesehatan-section/cuci_tangan.png",
-//    "/img/content-page/protokol-kesehatan-section/gunakan_handsanitizer.png",
-//    "/img/content-page/protokol-kesehatan-section/gunakan_masker.png",
-//    "/img/content-page/protokol-kesehatan-section/jaga_jarak.png"
 
-// ]
+const prokesPGN = [
+    {
+        type: "icon", 
+        icon: 
+        {
+            img: "/img/content-page/protokol-kesehatan-section/gunakan_masker.png", 
+            alt: "gunakan_masker", 
+            iconText: "Gunakan Masker"
+        }
+    },
+    {
+        type: "empty_box"
+    }, 
+    {
+        type: "icon",
+        icon: 
+        {
+            img: "/img/content-page/protokol-kesehatan-section/cuci_tangan.png", 
+            alt: "cuci_tangan", 
+            iconText: "Cuci Tangan"
+        }        
+    },
+    {
+        type: "empty_box"
+    },
+    {
+        type: "icon",
+        icon: 
+        {
+            img: "/img/content-page/protokol-kesehatan-section/gunakan_handsanitizer.png", 
+            alt: "gunakan_handsanitizer", 
+            iconText: "Gunakan Handsanitizer"
+        }
+    }
+]
 
 const theme = createTheme({
     breakpoints: {
@@ -20,6 +50,8 @@ const theme = createTheme({
             tigaEnamPuluh: 360,
             empatRatus: 400,
             empatTigaEmpat: 434,
+            limaRatus: 500,
+            enamRatus: 600,
             tujuhRatus: 700
         }
         
@@ -48,11 +80,32 @@ const theme = createTheme({
             "@media(min-width: 768px)": {
                 fontSize: '1.2rem'
             }
+        },
+        iconTextStyles: {
+            fontFamily: '"Roboto","Helvetica","Arial","sans-serif"',
+            fontWeight: 400,
+            fontSize: "0.75rem",
+            lineHeight: 1.66,
+            "@media(min-width: 400px)": {
+                fontSize: '0.8rem',
+            },
+            "@media(min-width: 600px)": {
+                fontSize: '0.9rem',
+            },
+            "@media(min-width: 700px)": {
+                fontSize: '1rem',
+            },
         }
     }
 })
 
 function ProtokolKesehatan () {
+    const iconContainerStyles = {
+        boxSizing: "border-box", 
+        height: "100%", 
+        display: "flex",
+        justifyContent: "center"
+    }
     return (
         <Box sx={{height: "100vh", backgroundColor: "#FFF7F5"}}>
             <EmptyBox emptyBoxStyles={{height: "50px"}} />
@@ -68,7 +121,7 @@ function ProtokolKesehatan () {
 
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
                     <ThemeProvider theme={theme}>
-                        <Box sx={{textAlign: "center", width: {xs: "64%", tigaEnamPuluh: "75%"},textIndent: {xs: "6px", tigaEnamPuluh: 0}}}>
+                        <Box sx={{textAlign: "center", width: {xs: "80%", tigaEnamPuluh: "75%"},textIndent: {xs: "6px", tigaEnamPuluh: 0}}}>
                             <Typography variant='gunaMencegah'>Guna mencegah penyebaran Covid-19, diharapkan bagi tamu undangan untuk mematuhi Protokol Kesehatan di bawah ini :</Typography>
                         </Box>    
                     </ThemeProvider>
@@ -76,57 +129,22 @@ function ProtokolKesehatan () {
 
                 <EmptyBox emptyBoxStyles={{height: "60px"}} />   
 
-                <Grid container sx={{height: "100%"}}>
-                    <ThemeProvider theme={theme}>
-                        <Grid item xs={1} empatRatus={2} empatTigaEmpat={1} tujuhRatus={2} ></Grid>
-                    </ThemeProvider>
-
-                    <ThemeProvider theme={theme}>
-                        <Grid item xs={2} empatRatus={2} tujuhRatus={2} 
-                        sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",textAlign: "center" }}> 
-                            <Box>
-                                <img src="/img/content-page/protokol-kesehatan-section/cuci_tangan.png" height="50px" alt="cuci_tangan" />
-                            </Box>
-                            <Box>
-                                <Typography variant='caption'>Cuci Tangan</Typography>      
-                            </Box>
-                        </Grid>
-                    </ThemeProvider>
-                    
-                    <ThemeProvider theme={theme}> 
-                        <Grid item xs={2} empatRatus={1} tujuhRatus={0}></Grid>
-                    </ThemeProvider>
-                    
-                    <ThemeProvider theme={theme}> 
-                        <Grid item xs={2} empatRatus={2} empatTigaEmpat={3}  tujuhRatus={2}  
-                        sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",textAlign: "center" }}> 
-                            <Box>
-                                <img src="/img/content-page/protokol-kesehatan-section/gunakan_masker.png" height="50px" alt="gunakan_masker" />    
-                            </Box>
-                            <Box>
-                                <Typography variant='caption'>Gunakan Masker</Typography>      
-                            </Box>
-                             
-                        </Grid>
-                    </ThemeProvider>
-                    
-                    <ThemeProvider theme={theme}> 
-                        <Grid item xs={2} empatRatus={1} tujuhRatus={1}></Grid>
-                    </ThemeProvider>
-                    
-                    <ThemeProvider theme={theme}>
-                        <Grid item xs={2} empatRatus={3} empatTigaEmpat={4} tujuhRatus={2} 
-                        sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",textAlign: "center" }}> 
-                            <Box>
-                                <img src="/img/content-page/protokol-kesehatan-section/gunakan_handsanitizer.png" height="50px" alt="pakai_handsanitizer" />    
-                            </Box>
-                            <Box>
-                                <Typography variant='caption'>Pakai Handsanitizer</Typography>     
-                            </Box>
-                            
-                        </Grid>      
-                    </ThemeProvider>
-                </Grid>
+                <Box sx={iconContainerStyles}>
+                    {
+                        prokesPGN.map((prokesIcon, index) => ( 
+                            prokesIcon.type === "icon" 
+                                ?   <ProkesIcon 
+                                    key={index}
+                                    theme={theme} 
+                                    imgLink={prokesIcon.icon.img}
+                                    iconText={prokesIcon.icon.iconText}
+                                    alt={prokesIcon.icon.alt} />    
+                                :   <ThemeProvider theme={theme} key={index}>
+                                        <Box sx={{height: "100%", width: { md: "20px", lg: "120px" }}}></Box>    
+                                    </ThemeProvider>
+                        ))
+                    }
+                </Box>
                 
             </Box>
             

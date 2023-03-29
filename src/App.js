@@ -188,7 +188,8 @@ function FrontPage ({ bukaUndanganHandler }) {
         <Box style={{boxSizing: "border-box", height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
           <Box style={{ marginBottom: "1rem"}} sx={ {width: {xs: "60%",sm: "50%", md: "30%"}}}>
            <img 
-              src='/img/DW430D-co-.webp' 
+              src='/img/DW430D-co-.webp'
+              alt="front_page_image" 
               style={{boxSizing: "border-box", backgroundSize: "cover", backgroundPosition: "center", width: "100%" }}
             /> 
           </Box>
