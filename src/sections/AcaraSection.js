@@ -84,7 +84,7 @@ function AcaraSection () {
         }
     ]
     return (
-        <Box sx={containerStyles}>
+        <Box sx={containerStyles} id="acara-section">
              <Box sx={acaraBoxStyles}>
                 <ThemeProvider theme={theme}>
                     {

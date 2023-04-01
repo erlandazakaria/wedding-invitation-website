@@ -89,7 +89,7 @@ const theme = createTheme({
 })
 function MempelaiSection () {
     return (
-        <Box>
+        <Box id="mempelai-section">
             <Box sx={{height: "100%", backgroundImage: "url('./img/BAHAN-TEMA-08-NAMA-1-scaled-1.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
                 <Box sx={{ textAlign: "center",display: "flex",flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                     <ThemeProvider theme={theme}>

@@ -22,7 +22,7 @@ const theme = createTheme({
 function Galeri () {
 
     return (
-        <Box sx={{boxSizing: "border-box", height: "100%", padding: "16px", backgroundColor: "#E8D3C3", textAlign: "center"}}>
+        <Box id="galeri-section" sx={{boxSizing: "border-box", height: "100%", padding: "16px", backgroundColor: "#E8D3C3", textAlign: "center"}}>
             <ThemeProvider theme={theme}>
                 <Typography variant='galeriTitle'>Galeri Foto</Typography>
             </ThemeProvider>

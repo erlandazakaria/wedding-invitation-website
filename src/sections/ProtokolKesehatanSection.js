@@ -107,7 +107,7 @@ function ProtokolKesehatan () {
         justifyContent: "center"
     }
     return (
-        <Box sx={{height: "100vh", backgroundColor: "#FFF7F5"}}>
+        <Box sx={{height: "100%", backgroundColor: "#FFF7F5"}}>
             <EmptyBox emptyBoxStyles={{height: "50px"}} />
             <Box>
 
@@ -147,6 +147,8 @@ function ProtokolKesehatan () {
                 </Box>
                 
             </Box>
+
+            <EmptyBox emptyBoxStyles={{height: "100px"}} />
             
         </Box>
     )

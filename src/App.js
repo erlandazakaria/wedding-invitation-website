@@ -224,7 +224,7 @@ function FrontPage ({ bukaUndanganHandler }) {
 
 function ContentPage ({theme}) {
   return (
-    <Box sx={{boxSizing: "border-box"}}>
+    <Box sx={{boxSizing: "border-box"}} id="home-section">
       <HomeSection theme={theme} />
       <MempelaiSection />
       <BottomNav />
