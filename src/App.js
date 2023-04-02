@@ -59,15 +59,18 @@ theme.typography.kepadaBapakIbu = {
 }
 
 theme.typography.kamiMengundangText = {
-  fontSize: "0.2rem ",
+  fontSize: "0.7rem ",
   "@media(min-width: 375px)": {
-    fontSize: "0.5rem"
+    fontSize: "0.75rem"
   },
   "@media(min-width: 540px)": {
-    fontSize: "0.8rem"
+    fontSize: "0.85rem"
+  },
+  "@media(min-width: 875px)": {
+    fontSize: "1rem"
   },
   "@media(min-width: 1200px)": {
-    fontSize: "1rem"
+    fontSize: "1.1rem"
   }
 }
 

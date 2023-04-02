@@ -1,4 +1,5 @@
 import { Box, Typography, createTheme, ThemeProvider, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import EmptyBox from '../components/EmptyBox';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
@@ -114,12 +115,12 @@ function AcaraSection () {
             <EmptyBox emptyBoxStyles={{height: "32px"}} />
             
             <Box sx={{display: "flex", justifyContent: "center"}}>
-                <Box >
-                    
+                <Box>
                         <Button variant='contained' sx={{ boxSizing: "border-box",padding: "6px 8px", borderRadius: "12px", backgroundColor: "#E8D3C3", border: "2px solid #fff", }}>
                             <LocationOnIcon sx={{fontSize: "18px", color: "#6C6C6C"}} />
                             <ThemeProvider theme={theme}>
-                                <Typography variant='lihatLokasi'>Lihat Lokasi</Typography>
+                                <Typography variant='lihatLokasi' >
+                                    <Link to="https://goo.gl/maps/wcuHSPC4g27xmGkR9" style={{textDecoration: "none", color: "inherit"}}>Lihat Lokasi</Link></Typography>
                             </ThemeProvider>  
                         </Button>
                       

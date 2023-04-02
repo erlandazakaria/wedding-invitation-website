@@ -152,7 +152,7 @@ function MempelaiSection () {
                     </Box>
                     <Box sx={{width: "98%"}}>
                         <ThemeProvider theme={theme}>
-                            <Typography variant='anakDariText'>Putri Pertama dari Bapak Suliono</Typography>    
+                            <Typography variant='anakDariText'>Putri dari Bapak Suliono</Typography>    
                         </ThemeProvider>    
                     </Box>
                     <Box sx={{ width: "80%"}}>
