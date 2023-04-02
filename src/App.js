@@ -10,6 +10,7 @@ import AcaraSection from './sections/AcaraSection';
 import Galeri from './sections/Galeri';
 import ProtokolKesehatan from './sections/ProtokolKesehatanSection';
 import PesanUntukKamiSection from './sections/PesanUntukKamiSection';
+import UcapanTerimaKasih from './sections/UcapanTerimaKasih';
 
 const theme = createTheme({
   breakpoints: {
@@ -89,9 +90,9 @@ theme.typography.weInviteYou = {
   "@media(min-width: 380px)": {
     color: "black"
   },
-  "@media(min-width: 450px)": {
-    color: "#fff"
-  },
+  // "@media(min-width: 450px)": {
+  //   color: "#fff"
+  // },
   "@media(min-width: 900px)": {
     color: "#6C6C6C",
     fontSize: "1.2rem",
@@ -189,9 +190,10 @@ function FrontPage ({ bukaUndanganHandler }) {
         <Box style={{boxSizing: "border-box", height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
           <Box style={{ marginBottom: "1rem"}} sx={ {width: {xs: "60%",sm: "50%", md: "30%"}}}>
            <img 
-              src='/img/DW430D-co-.webp'
+          //  src='/img/DW430D-co-.webp'
+              src='/img/front-page/foto_frontpage.jpg'
               alt="front_page_image" 
-              style={{boxSizing: "border-box", backgroundSize: "cover", backgroundPosition: "center", width: "100%" }}
+              style={{boxSizing: "border-box", backgroundSize: "cover", backgroundPosition: "center", width: "100%", backgroundColor: "transparent", borderRadius: "50%" }}
             /> 
           </Box>
             
@@ -233,7 +235,7 @@ function ContentPage ({theme}) {
       <Galeri />
       <ProtokolKesehatan />
       <PesanUntukKamiSection />
-      <Box sx={{height: "50vh"}}>Ucapan Terima kasih</Box>
+      <UcapanTerimaKasih />
     </Box>
   )
 }

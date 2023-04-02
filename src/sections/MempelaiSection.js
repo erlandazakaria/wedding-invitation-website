@@ -129,9 +129,16 @@ function MempelaiSection () {
                         alignItems: "center", 
                         margin: "0 auto",
                     }}>               
-                        <Box sx={{width: "auto",height: "100%"}}>
-                        <img src='/img/content-page/mempelai-section/mempelai-photo-1.webp'style={{ width: "auto",height: "100%"}} />   
-                        </Box>   
+                    <Box 
+                        sx={{
+                            height: {xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px",limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"},
+                            width: { xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px", limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"}
+                            }}>
+                       <Box sx={{width: "auto",height: "100%"}}>
+                        <img src='./img/content-page/mempelai-section/mempelai_wanita.jpg' alt='foto_mempelai_wanita' style={{ width: "100%",height: "100%", borderRadius: "50%"}} />
+                        </Box>  
+                    </Box>
+                          
                     </Box>
                 </ThemeProvider>
                 
@@ -179,10 +186,17 @@ function MempelaiSection () {
                         justifyContent: "center", 
                         alignItems: "center", 
                         margin: "0 auto",
-                    }}>               
-                        <Box sx={{width: "auto",height: "100%"}}>
-                            <img src='./img/content-page/mempelai-section/mempelai-photo-2.webp'style={{ width: "auto",height: "100%"}} />   
-                        </Box>   
+                    }}>  
+                        <Box 
+                            sx={{
+                                height: {xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px",limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"},
+                                width: { xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px", limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"}
+                            }}>
+                            <Box sx={{width: "auto",height: "100%"}}>
+                                <img src='./img/content-page/mempelai-section/mempelai_pria.jpg' alt='foto_mempelai_pria' style={{ width: "100%",height: "100%", borderRadius: "50%"}} /> 
+                            </Box>          
+                        </Box>             
+                        
                     </Box>
                 </ThemeProvider>
                 

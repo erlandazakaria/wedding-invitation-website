@@ -1,10 +1,10 @@
 import { Box, Typography, ThemeProvider } from '@mui/material';
-import SaveTheDateButton from './SaveTheDateButton';
+// import SaveTheDateButton from './SaveTheDateButton';
 function InvitationText ({ theme, backgroundColor}) {
-    const saveTheDateButtonStyle = {
-        boxStyles: {marginTop: "24px"}, 
-        buttonStyles: {padding: "4px 8px", textTransform: "capitalize", borderRadius: "8px", backgroundColor: "#424242"}
-    }
+    // const saveTheDateButtonStyle = {
+    //     boxStyles: {marginTop: "24px"}, 
+    //     buttonStyles: {padding: "4px 8px", textTransform: "capitalize", borderRadius: "8px", backgroundColor: "#424242"}
+    // }
     return (
         <Box style={{height: "26vh", textAlign: "center", backgroundColor: backgroundColor}}>
                 <Box >
@@ -24,10 +24,10 @@ function InvitationText ({ theme, backgroundColor}) {
                     </ThemeProvider>    
                 </Box>
 
-                {backgroundColor 
+                {/* {backgroundColor 
                     ? null 
                     : <SaveTheDateButton theme={theme} saveTheDateButtonStyle={saveTheDateButtonStyle} />
-                      }
+                      } */}
                 
             </Box>
     )

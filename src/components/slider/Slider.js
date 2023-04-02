@@ -28,21 +28,22 @@ const theme = createTheme({
     }
 }) 
 
+
 const cicinPhotos = [
-    {photo: "/img/cicin/DSC06238.jpg", alt: "photo-1"},
-    {photo: "/img/cicin/DSC06241.jpg", alt: "photo-2"},
-    {photo: "/img/cicin/DSC06274.jpg", alt: "photo-3"},
-    {photo: "/img/cicin/DSC06366.jpg", alt: "photo-4"},
-    {photo: "/img/cicin/DSC06400.jpg", alt: "photo-5"},
-    {photo: "/img/cicin/DSC06415.jpg", alt: "photo-6"},
-    {photo: "/img/cicin/DSC06493.jpg", alt: "photo-7"},
-    {photo: "/img/cicin/DSC06502.jpg", alt: "photo-8"},
-    {photo: "/img/cicin/DSC06527.jpg", alt: "photo-9"},
-    {photo: "/img/cicin/DSC06725.jpg", alt: "photo-10"},
-    {photo: "/img/cicin/DSC06736.jpg", alt: "photo-11"},
-    {photo: "/img/cicin/DSC06798.jpg", alt: "photo-12"},
-    {photo: "/img/cicin/DSC06828.jpg", alt: "photo-13"},
-    {photo: "/img/cicin/DSC06904.jpg", alt: "photo-14"}
+    {photo: "/img/content-page/cicin-resized/1.jpeg", alt: "photo-1"},
+    {photo: "/img/content-page/cicin-resized/2.jpeg", alt: "photo-2"},
+    {photo: "/img/content-page/cicin-resized/3.jpeg", alt: "photo-3"},
+    {photo: "/img/content-page/cicin-resized/4.jpeg", alt: "photo-4"},
+    {photo: "/img/content-page/cicin-resized/5.jpeg", alt: "photo-5"},
+    {photo: "/img/content-page/cicin-resized/6.jpeg", alt: "photo-6"},
+    {photo: "/img/content-page/cicin-resized/7.jpeg", alt: "photo-7"},
+    {photo: "/img/content-page/cicin-resized/8.jpeg", alt: "photo-8"},
+    {photo: "/img/content-page/cicin-resized/9.jpeg", alt: "photo-9"},
+    {photo: "/img/content-page/cicin-resized/10.jpeg", alt: "photo-10"},
+    {photo: "/img/content-page/cicin-resized/11.jpeg", alt: "photo-11"},
+    {photo: "/img/content-page/cicin-resized/12.jpeg", alt: "photo-12"},
+    {photo: "/img/content-page/cicin-resized/13.jpeg", alt: "photo-13"},
+    {photo: "/img/content-page/cicin-resized/14.jpeg", alt: "photo-14"}
 ]
 
 function Slider () {
