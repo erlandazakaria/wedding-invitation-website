@@ -11,6 +11,7 @@ import Galeri from './sections/Galeri';
 import ProtokolKesehatan from './sections/ProtokolKesehatanSection';
 import PesanUntukKamiSection from './sections/PesanUntukKamiSection';
 import UcapanTerimaKasih from './sections/UcapanTerimaKasih';
+import { Route, Routes, useParams } from 'react-router-dom';
 
 const theme = createTheme({
   breakpoints: {
@@ -77,6 +78,14 @@ theme.typography.bukaUndangan = {
   }
 }
 
+theme.typography.namaTamu = {
+  fontSize: "25px",
+  fontWeight: "600",
+  "@media(min-width: 540px)": {
+    fontSize: "2rem"
+  }
+}
+
 // contentPage Component styles
 
 // home section
@@ -137,11 +146,21 @@ theme.typography.dateAtCountdown = {
 }
 
 
+function App() {
+  
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/:tamu" element={<Home />} />
+    </Routes>
+  );
+}
 
 
 // app container
 
-function App() {  
+function Home() {  
+  const { tamu } = useParams();
   const [isInvitationOpened, setIsInvitationOpened] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const fixAutoPlay = useRef();
@@ -161,7 +180,7 @@ function App() {
 
   return (
     <Box style={{margin: 0, padding: 0}}>
-      {isInvitationOpened ? <ContentPage theme={theme} /> : <FrontPage bukaUndanganHandler={bukaUndanganHandler} />}
+      {isInvitationOpened ? <ContentPage theme={theme} /> : <FrontPage tamu={tamu} bukaUndanganHandler={bukaUndanganHandler} />}
       <audio style={{visibility: "hidden"}} id="musicplayer" src="/audio/wedding-song.mp3" loop={true} autoPlay={true} preload="auto" muted={isMuted} ref={fixAutoPlay} >
       </audio>
     </Box>
@@ -174,7 +193,7 @@ export default App;
 
 // front page component
 
-function FrontPage ({ bukaUndanganHandler }) {
+function FrontPage ({ tamu, bukaUndanganHandler }) {
   return (
     <Box className="App" style={
       {
@@ -204,6 +223,9 @@ function FrontPage ({ bukaUndanganHandler }) {
           <ThemeProvider theme={theme}>
             <Typography variant='kepadaBapakIbu' style={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "1rem"}}>Kepada Bapak/Ibu/Saudara/i</Typography>
           </ThemeProvider>
+          {tamu &&<ThemeProvider theme={theme}>
+            <Typography variant='namaTamu' style={{ boxSizing: "border-box", color:"#715746", marginBottom: "1rem"}}>{tamu}</Typography>
+          </ThemeProvider>}
           
           <ThemeProvider theme={theme}>
             <Typography variant='kamiMengundangText' style={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "2rem"}}>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami</Typography>
