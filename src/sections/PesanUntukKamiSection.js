@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import moment from 'moment/moment';
+import 'moment/locale/id';
 import { Box, Typography, TextField,  MenuItem, FormControl, Button, Stack, Pagination, createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -122,7 +124,8 @@ function PesanUntukKamiSection () {
             set(ref(database, 'users/' + dataName(collectionOfComments)), {
                 nama: values.nama,
                 ucapan: values.ucapan,
-                kehadiran: values.kehadiran
+                kehadiran: values.kehadiran,
+                waktu: Date.now()
             });
             action.resetForm();
             onValue(users, (snapshot) => {
@@ -149,7 +152,7 @@ function PesanUntukKamiSection () {
                 setCollectionOfComments(snapshot.val())
             }   
         })
-        
+        moment.locale("id");
     },[])
 
     return (
@@ -280,7 +283,12 @@ function PesanUntukKamiSection () {
 
                     <Box sx={{height: "200px", overflow: "scroll"}}>
                         {
-                            sortedData.map((data,index) => (
+                            sortedData.map((data,index) => {
+                                let timeDiff = null;
+                                if (data[1].waktu) {
+                                    timeDiff = moment(data[1].waktu).fromNow(); // 3.5
+                                }
+                                return (
                                 <Box key={index} sx={{borderBottom: "1px dotted #c4ced0"}}>
                                      <Box sx={{padding: "10px 15px 0"}}>
                                         <ThemeProvider theme={theme}>
@@ -288,12 +296,16 @@ function PesanUntukKamiSection () {
                                                 <Typography variant='namaPengirim'>{data[1].nama}</Typography>
                                             </Box> 
 
-                                             <Box>
-                                                <Typography variant='ucapanDariPengirim'>{data[1].ucapan}</Typography></Box>   
+                                            <Box>
+                                                <Typography variant='ucapanDariPengirim'>{data[1].ucapan}</Typography>
+                                            </Box>
+                                            {timeDiff && <Box>
+                                                <Typography variant='ucapanDariPengirim'>{timeDiff}</Typography>
+                                            </Box> }
                                         </ThemeProvider>
                                     </Box>
-                                </Box>
-                            ))  
+                                </Box>)
+                            })  
                         }
                         
                     </Box>
