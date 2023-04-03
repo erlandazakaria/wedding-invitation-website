@@ -161,7 +161,7 @@ function MempelaiSection () {
                         </ThemeProvider>    
                     </Box>
                     <Box>
-                        <InstagramLinkButton />
+                        <InstagramLinkButton linkIg="https://instagram.com/_cicin/" />
                     </Box>             
                 </Box>
 
@@ -219,7 +219,7 @@ function MempelaiSection () {
                         </ThemeProvider>    
                     </Box>
                     <Box>
-                        <InstagramLinkButton />
+                        <InstagramLinkButton linkIg="https://www.instagram.com/handhikadp/" />
                     </Box>             
                 </Box>
                     

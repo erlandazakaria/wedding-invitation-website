@@ -12,6 +12,7 @@ import ProtokolKesehatan from './sections/ProtokolKesehatanSection';
 import PesanUntukKamiSection from './sections/PesanUntukKamiSection';
 import UcapanTerimaKasih from './sections/UcapanTerimaKasih';
 import { Route, Routes, useParams } from 'react-router-dom';
+import AngpaoDanHadiahSection from './sections/HadiahSection';
 
 const theme = createTheme({
   breakpoints: {
@@ -174,12 +175,12 @@ function Home() {
     setIsMuted(false);
   }
 
-  useEffect(() => {
-    if(isMuted === false) {
-      fixAutoPlay.current.play()  
-    }
-    return
-  },[isMuted])
+  // useEffect(() => {
+  //   if(isMuted === false) {
+  //     fixAutoPlay.current.play()  
+  //   }
+  //   return
+  // },[isMuted])
 
   return (
     <Box style={{margin: 0, padding: 0}}>
@@ -259,6 +260,7 @@ function ContentPage ({theme}) {
       <AcaraSection />
       <Galeri />
       <ProtokolKesehatan />
+      <AngpaoDanHadiahSection />
       <PesanUntukKamiSection />
       <UcapanTerimaKasih />
     </Box>
