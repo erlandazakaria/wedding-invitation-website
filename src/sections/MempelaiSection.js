@@ -160,6 +160,8 @@ function MempelaiSection () {
                             <Typography variant='anakDariText'>& Ibu Wiwik Puji Astutik S.Pd</Typography>    
                         </ThemeProvider>    
                     </Box>
+                    
+                    <EmptyBox emptyBoxStyles={{height: {md: "20px"}}} />
                     <Box>
                         <InstagramLinkButton linkIg="https://instagram.com/_cicin/" />
                     </Box>             
@@ -218,8 +220,9 @@ function MempelaiSection () {
                             <Typography variant='anakDariText'>& Ibu Tri Winarni</Typography>    
                         </ThemeProvider>    
                     </Box>
+                    <EmptyBox emptyBoxStyles={{height: {md: "20px"}}} />
                     <Box>
-                        <InstagramLinkButton linkIg="https://www.instagram.com/handhikadp/" />
+                        <InstagramLinkButton linkIg="https://www.instagram.com/handhikadp/"  />
                     </Box>             
                 </Box>
                     

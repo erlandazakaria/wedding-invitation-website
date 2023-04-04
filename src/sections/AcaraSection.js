@@ -116,10 +116,11 @@ function AcaraSection () {
             
             <Box sx={{display: "flex", justifyContent: "center"}}>
                 <Box>
-                        <Button variant='contained' sx={{ boxSizing: "border-box",padding: "6px 8px", borderRadius: "12px", backgroundColor: "#E8D3C3", border: "2px solid #fff", }}>
-                            <LocationOnIcon sx={{fontSize: "18px", color: "#6C6C6C"}} />
+                        <Button variant='contained' sx={{ boxSizing: "border-box",padding: "6px 8px", borderRadius: "12px", backgroundColor: "#E8D3C3", border: "2px solid #fff",
+                         "&:hover": {transform: "scale(1.3)", color: "white", backgroundColor: "#424242"} }}>
+                            <LocationOnIcon sx={{fontSize: "18px", color: "#6C6C6C", "&:hover": {color: "white"}}} />
                             <ThemeProvider theme={theme}>
-                                <Typography variant='lihatLokasi' >
+                                <Typography variant='lihatLokasi' sx={{"&:hover": {color: "white"}}}>
                                     <Link to="https://goo.gl/maps/wcuHSPC4g27xmGkR9" style={{textDecoration: "none", color: "inherit"}}>Lihat Lokasi</Link></Typography>
                             </ThemeProvider>  
                         </Button>

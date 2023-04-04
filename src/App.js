@@ -175,12 +175,12 @@ function Home() {
     setIsMuted(false);
   }
 
-  // useEffect(() => {
-  //   if(isMuted === false) {
-  //     fixAutoPlay.current.play()  
-  //   }
-  //   return
-  // },[isMuted])
+  useEffect(() => {
+    if(isMuted === false) {
+      fixAutoPlay.current.play()  
+    }
+    return
+  },[isMuted])
 
   return (
     <Box style={{margin: 0, padding: 0}}>
@@ -199,7 +199,7 @@ export default App;
 
 function FrontPage ({ tamu, bukaUndanganHandler }) {
   return (
-    <Box className="App" style={
+    <Box className="App" sx={
       {
         boxSizing: "border-box",
         backgroundImage: "url('./img/BAHAN-TEMA-08-scaled-1.jpg')", 
@@ -209,11 +209,10 @@ function FrontPage ({ tamu, bukaUndanganHandler }) {
       }
     } >
       {/* elements styles could be saved on a variable of object, so the code will be neat when other people see it */}
-      <Box style={{boxSizing: "border-box", height: "100vh", width: "100%"}}>
-        <Box style={{boxSizing: "border-box", height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-          <Box style={{ marginBottom: "1rem"}} sx={ {width: {xs: "60%",sm: "50%", md: "30%"}}}>
+      <Box sx={{boxSizing: "border-box", height: "100vh", width: "100%"}}>
+        <Box sx={{boxSizing: "border-box", height: "100%", width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+          <Box  sx={{width: {xs: "60%",sm: "50%", md: "24%"}, marginBottom: "1rem"}}>
            <img 
-          //  src='/img/DW430D-co-.webp'
               src='/img/front-page/foto_frontpage.jpg'
               alt="front_page_image" 
               style={{boxSizing: "border-box", backgroundSize: "cover", backgroundPosition: "center", width: "100%", backgroundColor: "transparent", borderRadius: "50%" }}
@@ -222,26 +221,35 @@ function FrontPage ({ tamu, bukaUndanganHandler }) {
             
           {/* could be more simple than this by doing mapping on array that each index have variant, style, and text as key */}
           <ThemeProvider theme={theme}>
-            <Typography variant='testText' style={{ boxSizing: "border-box", color:"#9d7a5b", marginBottom: "1rem"}}>Cintya & Handika</Typography>  
+            <Typography variant='testText' sx={{ boxSizing: "border-box", color:"#9d7a5b", marginBottom: "1rem"}}>Cintya & Handika</Typography>  
           </ThemeProvider>
           <ThemeProvider theme={theme}>
-            <Typography variant='kepadaBapakIbu' style={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "1rem"}}>Kepada Bapak/Ibu/Saudara/i</Typography>
+            <Typography variant='kepadaBapakIbu' sx={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "1rem"}}>Kepada Bapak/Ibu/Saudara/i</Typography>
           </ThemeProvider>
           {tamu &&<ThemeProvider theme={theme}>
-            <Typography variant='namaTamu' style={{ boxSizing: "border-box", color:"#715746", marginBottom: "1rem"}}>{tamu}</Typography>
+            <Typography variant='namaTamu' sx={{ boxSizing: "border-box", color:"#715746", marginBottom: "1rem"}}>{tamu}</Typography>
           </ThemeProvider>}
           
           <ThemeProvider theme={theme}>
-            <Typography variant='kamiMengundangText' style={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "2rem"}}>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami</Typography>
+            <Typography variant='kamiMengundangText' sx={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "2rem"}}>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami</Typography>
           </ThemeProvider>
           
           
-          <Button onClick={(event) => bukaUndanganHandler(event)} variant='contained' style={{fontSize: "12px", borderRadius: "17px", backgroundColor:"#8a6b57", textTransform: "capitalize", padding: "6px 8px"}}>
+          <Button 
+            onClick={(event) => bukaUndanganHandler(event)} 
+            variant='contained' 
+            sx={{
+              fontSize: "12px", 
+              borderRadius: "17px", 
+              backgroundColor:"#8a6b57", 
+              textTransform: "capitalize", 
+              padding: "6px 8px",
+              "&:hover": {transform: "scale(1.2)", backgroundColor: "#424242"}
+              }}>
             <MenuBookIcon sx={{marginRight: "0.3rem", fontSize: {xs: 18, sm: 23, lg: 26}}}></MenuBookIcon>
             <Typography variant='caption' sx={{fontSize: {xs:"13px",sm: "16px", md: "18px", lg: "24px"}, fontWeight: "700"}}>Buka Undangan</Typography>
           </Button>  
         </Box>
-        
       </Box>
       
     </Box>  

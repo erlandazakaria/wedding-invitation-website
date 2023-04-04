@@ -102,10 +102,15 @@ function AngpaoDanHadiahSection () {
     const handleClose = () => {
         setClipboardAlert(false);
     }
+
+    const clipboardButtonStyles = {
+        backgroundColor: "#424242", color: "#fff", padding: "10px 18px", "&:hover": {transform: "scale(1.1)", backgroundColor: "#8a6b57"}
+    }
     return (
         <ThemeProvider theme={theme}>
-        <Box sx={{boxSizing: "border-box", height: "100%" }}>
-            
+        <Box sx={{boxSizing: "border-box", height: "100%", borderTop: "4px solid #E8D3C3" }}>
+            <Box sx={{boxSizing: "border-box", height: "2px", border: "2px solid white"}}></Box>
+            <Box sx={{boxSizing: "border-box", height: "2px", border: "2px solid #E8D3C3"}}></Box>
 
             
             <Box sx={firstWrapperStyles}>
@@ -156,7 +161,7 @@ function AngpaoDanHadiahSection () {
                             }}>
                                 <EmptyBox emptyBoxStyles={{height: "20px"}} />
                                 <Box sx={{height: "35px"}}>
-                                    <img src="/img/content-page/hadiah-section/bni-1.png" height="100%" />
+                                    <img src="/img/content-page/hadiah-section/bni-1.png" alt='logo-bni' height="100%" />
                                 </Box>
                                 <EmptyBox emptyBoxStyles={{height: "20px"}} />
                                 <Box>
@@ -169,10 +174,11 @@ function AngpaoDanHadiahSection () {
                                 <EmptyBox emptyBoxStyles={{height: "10px"}} />
                                 <Box>
                                     <CopyToClipboard text='0906589701'>
-                                        <Button variant='contained' onClick={handleClick} sx={{backgroundColor: "#424242", color: "#fff", padding: "8px"}}>
+                                        <Button variant='contained' onClick={handleClick} sx={clipboardButtonStyles}>
                                             <Box sx={{display: "flex"}}>
-                                                <ContentCopyIcon sx={{fontSize: "15px"}} />
-                                                <Typography variant="caption" sx={{fontSize: "10px"}}>Salin No Rekening</Typography>    
+                                                <ContentCopyIcon sx={{fontSize: {xs: "15px", sm: "18px"}}} />
+                                                <EmptyBox emptyBoxStyles={{width: "4px", height: "100%"}} />
+                                                <Typography variant="caption" sx={{fontSize: {xs: "10px", sm: "13px"}}}>Salin No Rekening</Typography>    
                                             </Box>
                                             
                                         </Button>    
@@ -203,7 +209,7 @@ function AngpaoDanHadiahSection () {
                             }}>
                                 <EmptyBox emptyBoxStyles={{height: "20px"}} />
                                 <Box sx={{height: "50px"}}>
-                                    <img src="/img/content-page/hadiah-section/mandiri-1.png" height="100%" />
+                                    <img src="/img/content-page/hadiah-section/mandiri-1.png" alt='logo-mandiri' height="100%" />
                                 </Box>
                                 <EmptyBox emptyBoxStyles={{height: "20px"}} />
                                 <Box>
@@ -216,10 +222,11 @@ function AngpaoDanHadiahSection () {
                                 <EmptyBox emptyBoxStyles={{height: "10px"}} />
                                 <Box>
                                     <CopyToClipboard text='1440022395625'>
-                                        <Button variant='contained' onClick={handleClick} sx={{backgroundColor: "#424242", color: "#fff", padding: "8px"}}>
+                                        <Button variant='contained' onClick={handleClick} sx={clipboardButtonStyles}>
                                             <Box sx={{display: "flex"}}>
-                                                <ContentCopyIcon sx={{fontSize: "15px"}} />
-                                                <Typography variant="caption" sx={{fontSize: "10px"}}>Salin No Rekening</Typography>    
+                                                <ContentCopyIcon sx={{fontSize: {xs: "15px", sm: "18px"}}} />
+                                                <EmptyBox emptyBoxStyles={{width: "4px", height: "100%"}} />
+                                                <Typography variant="caption" sx={{fontSize: {xs: "10px", sm: "13px"}}}>Salin No Rekening</Typography>    
                                             </Box>
                                             
                                         </Button>    

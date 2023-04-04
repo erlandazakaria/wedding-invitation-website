@@ -5,6 +5,7 @@ import { Box, Typography, TextField,  MenuItem, FormControl, Button, Stack, Pagi
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import EmptyBox from '../components/EmptyBox';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, onValue } from 'firebase/database';
@@ -70,7 +71,7 @@ const theme = createTheme({
                 fontSize: "1.2rem"
             },
             "@media(min-width:700px)": {
-                fontSize: "1.3rem"
+                fontSize: "1.5rem"
             },
         },
         namaPengirim: {
@@ -103,14 +104,6 @@ function PesanUntukKamiSection () {
 
     const isScreenAt425Px = useMediaQuery("(min-width: 425px)");
 
-    const dataName = (totalIndex) => {
-        if (totalIndex === []) {
-            return 0
-        } else {
-            return totalIndex.length
-        }
-    }
-
     const formik = useFormik({
         initialValues: {
             nama: "",
@@ -121,7 +114,7 @@ function PesanUntukKamiSection () {
         onSubmit: (values, action) => {
             const db = getDatabase();
             const users = ref(db, 'users/')
-            set(ref(database, 'users/' + dataName(collectionOfComments)), {
+            set(ref(database, 'users/' + collectionOfComments.length), {
                 nama: values.nama,
                 ucapan: values.ucapan,
                 kehadiran: values.kehadiran,
@@ -146,10 +139,10 @@ function PesanUntukKamiSection () {
         let db = getDatabase();
         let users = ref(db, 'users/')
         onValue(users, (snapshot) => {
-            if (snapshot.val() === []) {
+            if (snapshot.val() === null) {
                 return;
             } else {
-                setCollectionOfComments(snapshot.val())
+                setCollectionOfComments(snapshot.val());
             }   
         })
         moment.locale("id");
@@ -158,7 +151,7 @@ function PesanUntukKamiSection () {
     return (
         <Box style={{height: "100%", boxSizing: "border-box", backgroundColor: "#E8D3C3"}} id="pesan-untuk-kami-section">
            <Box sx={{textAlign: "center", marginBottom: "20px"}}>
-            
+
             <EmptyBox emptyBoxStyles={{height:"24px"}} />
             
             <ThemeProvider theme={theme}>
@@ -175,7 +168,6 @@ function PesanUntukKamiSection () {
             </ThemeProvider>
                 
             </Box> 
-
             <Box sx={{height: "100%", padding: {xs: "20px", sm: "20px 40px", lg: "20px 60px"}}}>
 
                 {/* chatbox */}
@@ -186,7 +178,8 @@ function PesanUntukKamiSection () {
                             variant='totalComment'
                             > 
 
-                                {collectionOfComments === [] ? "0" : Object.entries(collectionOfComments).length} Comments
+                                {collectionOfComments === [] ? "0 " : `${Object.entries(collectionOfComments).length} `}
+                                 Comments
 
                             </Typography>       
                         </Box>
@@ -268,9 +261,11 @@ function PesanUntukKamiSection () {
                             
                             <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                                 <Button variant='contained' type='submit' sx={{
-                                    fontSize: "0.9rem", textTransform: "capitalize",
+                                    fontSize: {xs: "0.9rem", sm: "1.1rem", md: "1.3rem"}, textTransform: "capitalize",
                                     backgroundColor: "#7B6945", 
                                     padding: "4px 25px",
+                                    "&:hover": {boxShadow: "0 0 5px 5px #424242", transform: "scale(1.1)"}
+                                    
                                     }}>Kirim
                                 </Button>        
                             </Box>
@@ -280,7 +275,7 @@ function PesanUntukKamiSection () {
 
                     </Box>
 
-
+                    
                     <Box sx={{height: "200px", overflow: "scroll"}}>
                         {
                             sortedData.map((data,index) => {
@@ -296,10 +291,12 @@ function PesanUntukKamiSection () {
                                                 <Typography variant='namaPengirim'>{data[1].nama}</Typography>
                                             </Box> 
 
-                                            <Box>
+                                            <Box sx={{marginBottom: "4px"}}>
                                                 <Typography variant='ucapanDariPengirim'>{data[1].ucapan}</Typography>
                                             </Box>
-                                            {timeDiff && <Box>
+                                            {timeDiff && <Box sx={{display: "flex", alignItems: "center"}}>
+                                                <AccessTimeIcon sx={{fontSize: "1.2rem"}} />
+                                                <EmptyBox emptyBoxStyles={{height: "100%", width: "3px"}} />
                                                 <Typography variant='ucapanDariPengirim'>{timeDiff}</Typography>
                                             </Box> }
                                         </ThemeProvider>
