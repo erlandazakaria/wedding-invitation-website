@@ -1,10 +1,10 @@
 import { Box, Typography, ThemeProvider } from '@mui/material';
-import SaveTheDateButton from './SaveTheDateButton';
+// import SaveTheDateButton from './SaveTheDateButton';
 function InvitationText ({ theme, backgroundColor}) {
-    const saveTheDateButtonStyle = {
-        boxStyles: {marginTop: "24px"}, 
-        buttonStyles: {padding: "4px 8px", textTransform: "capitalize", borderRadius: "8px", backgroundColor: "#424242"}
-    }
+    // const saveTheDateButtonStyle = {
+    //     boxStyles: {marginTop: "24px"}, 
+    //     buttonStyles: {padding: "4px 8px", textTransform: "capitalize", borderRadius: "8px", backgroundColor: "#424242"}
+    // }
     return (
         <Box style={{height: "26vh", textAlign: "center", backgroundColor: backgroundColor}}>
                 <Box >
@@ -14,20 +14,20 @@ function InvitationText ({ theme, backgroundColor}) {
                 </Box>
                 <Box style={{marginBottom: "8px"}}>
                     <ThemeProvider theme={theme}>
-                        <Typography variant='testText' style={{ boxSizing: "border-box"}}>Gaby & Erlanda</Typography>  
+                        <Typography variant='testText' style={{ boxSizing: "border-box"}}>Cintya & Handika</Typography>  
                     </ThemeProvider>    
                 </Box>
                 
                 <Box style={{marginBottom: "8px"}}>
                     <ThemeProvider theme={theme}>
-                        <Typography variant='weInviteYou' >Sabtu, 19 November 2022</Typography>
+                        <Typography variant='weInviteYou' >Kamis, 11 Mei 2023</Typography>
                     </ThemeProvider>    
                 </Box>
 
-                {backgroundColor 
+                {/* {backgroundColor 
                     ? null 
                     : <SaveTheDateButton theme={theme} saveTheDateButtonStyle={saveTheDateButtonStyle} />
-                      }
+                      } */}
                 
             </Box>
     )

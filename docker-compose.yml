@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  s-cicin-wedding:
+    container_name: c-cicin-wedding
+    build: 
+      context: . 
+    image: cicin-wedding:1.0.0
+    restart: unless-stopped
+    networks:
+      n-mkn: {}
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.r-cicin-wedding.entrypoints=e-secure
+      - traefik.http.routers.r-cicin-wedding.rule=Host(`cintyahandhika.my.id`)
+      - traefik.http.routers.r-cicin-wedding.tls=true
+      - traefik.http.routers.r-cicin-wedding.tls.certResolver=lets-encrypt
+
+networks:
+  n-mkn:
+    external: true
+    name: n-mkn

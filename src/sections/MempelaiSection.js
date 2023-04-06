@@ -1,4 +1,5 @@
 import { Box, Typography, createTheme, ThemeProvider } from '@mui/material';
+import ArRum from '../components/ArRum';
 import EmptyBox from '../components/EmptyBox';
 import InstagramLinkButton from '../components/InstagramLinkButton';
 
@@ -72,127 +73,167 @@ const theme = createTheme({
             fontSize: "1.4rem",
             fontWeight: 600,
             color: "#6C6C6C"
+        },
+        arRum: {
+            fontSize: "1rem",
+            color: "grey",
+            fontFamily: 'Cormorant Garamond',
+            fontWeight: "700",
+            lineHeight: 1,
+            "@media(min-width: 768px)": {
+                fontSize: "1.4rem", 
+                lineHeight: 1.4
+            }
         }
     }
 })
 function MempelaiSection () {
     return (
-        <Box sx={{height: "160vh", backgroundImage: "url('./img/BAHAN-TEMA-08-NAMA-1-scaled-1.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
-            <Box sx={{ textAlign: "center",display: "flex",flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-                <ThemeProvider theme={theme}>
-                    <Box sx={{height: {xs: "4vh", sm: "8vh", tujuhEnamDelapan: "10vh"}}}></Box>
-                </ThemeProvider>
-                
-                <Box>
+        <Box id="mempelai-section">
+            <Box sx={{height: "100%", backgroundImage: "url('./img/BAHAN-TEMA-08-NAMA-1-scaled-1.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+                <Box sx={{ textAlign: "center",display: "flex",flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                     <ThemeProvider theme={theme}>
-                        <Typography variant="assalamualaikumText">Assalamualaikum Wr. Wb. </Typography>    
+                        <Box sx={{height: {xs: "4vh", sm: "8vh", tujuhEnamDelapan: "10vh"}}}></Box>
                     </ThemeProvider>
+                    
+                    <Box>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="assalamualaikumText">Assalamualaikum Wr. Wb. </Typography>    
+                        </ThemeProvider>
 
-                <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: 0, tujuhEnamDelapan: "2vh"}}} />
+                    <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: 0, tujuhEnamDelapan: "2vh"}}} />
 
-                </Box>
-                <Box sx={{display: "flex",width: "90%", justifyContent: "center",  }}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='tanpaMengurangiHormatText'>Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian</Typography>    
-                    </ThemeProvider>
-                </Box>
-                <Box>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='tanpaMengurangiHormatText'>untuk menghadiri acara pernikahan kami:</Typography>
-                    </ThemeProvider>
-                </Box>
-            </Box>
-
-            <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: "4vh", empatLimaPuluh: "3vh"}}} />
-
-             {/* mempelai wanita */}
-
-            <ThemeProvider theme={theme}>
-                <Box sx={{
-                    height: {xs: "26vh",tigaTujuhLima: "32vh",empatLimaPuluh: "36vh", limaratus: "42vh",sm: "48vh", tujuhEnamDelapan: "22%"}, 
-                    width: "auto", 
-                    display: "flex", 
-                    justifyContent: "center", 
-                    alignItems: "center", 
-                    margin: "0 auto",
-                }}>               
-                    <Box sx={{width: "auto",height: "100%"}}>
-                    <img src='/img/content-page/mempelai-section/mempelai-photo-1.webp'style={{ width: "auto",height: "100%"}} />   
-                    </Box>   
-                </Box>
-            </ThemeProvider>
-            
-            <EmptyBox theme={theme} emptyBoxStyles={{height: "2vh"}} />
-
-            <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
-                <Box>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant="namaMempelaiText">Gaby Amandasari, S.S.T., M.A</Typography>    
-                    </ThemeProvider>    
-                </Box>
-                <Box sx={{width: "98%"}}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='anakDariText'>Putri Pertama dari Bapak Imam Idhi Kurniadi, S.E</Typography>    
-                    </ThemeProvider>    
-                </Box>
-                <Box sx={{ width: "80%"}}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='anakDariText'>& Ibu Indah Sri Handayani, S.E</Typography>    
-                    </ThemeProvider>    
-                </Box>
-                <Box>
-                    <InstagramLinkButton />
-                </Box>             
-            </Box>
-
-             <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: "4vh", empatLimaPuluh: "3vh", tujuhEnamDelapan: "2vh"}}} />
-             
-                {/* mempelai pria */}
-               
-            <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                <ThemeProvider theme={theme}>
-                    <Typography variant="danText">&</Typography>    
-                </ThemeProvider>
-                
-            </Box>   
-             
-             <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: "4vh", empatLimaPuluh: "3vh", tujuhEnamDelapan: "2vh"}}} />  
-             
-             <ThemeProvider theme={theme}>
-                <Box sx={{height: {xs: "26vh",tigaTujuhLima: "32vh",empatLimaPuluh: "36vh", limaratus: "42vh",sm: "48vh", tujuhEnamDelapan: "22%"}, width: "100%"}}>
-                    <Box sx={{height: "100%", width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        <Box sx={{height: "100%", width: "auto"}}>
-                            <img src='./img/content-page/mempelai-section/mempelai-photo-2.webp' style={{height: "100%",width: "auto"}} />
-                        </Box>
                     </Box>
-                </Box>    
-             </ThemeProvider>
-            
-            <EmptyBox theme={theme} emptyBoxStyles={{height: "2vh"}} />
+                    <Box sx={{display: "flex",width: "90%", justifyContent: "center",  }}>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant='tanpaMengurangiHormatText'>Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian</Typography>    
+                        </ThemeProvider>
+                    </Box>
+                    <Box>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant='tanpaMengurangiHormatText'>untuk menghadiri acara pernikahan kami:</Typography>
+                        </ThemeProvider>
+                    </Box>
+                </Box>
 
-            <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
-                <Box>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant="namaMempelaiText">Erlanda Zakaria, S.S</Typography>    
-                    </ThemeProvider>    
-                </Box>
-                <Box sx={{display: "flex",justifyContent: "center",alignItems: "center"}}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='anakDariText'>Putra Kedua dari Bapak Suliono</Typography>    
-                    </ThemeProvider>    
-                </Box>
-                <Box sx={{ width: "80%"}}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='anakDariText'>& Ibu Wiwik Puji Astutik, S.Pd</Typography>    
-                    </ThemeProvider>    
-                </Box>
-                <Box>
-                    <InstagramLinkButton />
-                </Box>             
-            </Box>
+                <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: "4vh", empatLimaPuluh: "3vh"}}} />
+
+                {/* mempelai wanita */}
+
+                <ThemeProvider theme={theme}>
+                    <Box sx={{
+                        height: {xs: "26vh",tigaTujuhLima: "32vh",empatLimaPuluh: "36vh", limaratus: "42vh",sm: "48vh", tujuhEnamDelapan: "22%"}, 
+                        width: "auto", 
+                        display: "flex", 
+                        justifyContent: "center", 
+                        alignItems: "center", 
+                        margin: "0 auto",
+                    }}>               
+                    <Box 
+                        sx={{
+                            height: {xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px",limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"},
+                            width: { xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px", limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"}
+                            }}>
+                       <Box sx={{width: "auto",height: "100%"}}>
+                        <img src='./img/content-page/mempelai-section/mempelai_wanita.jpg' alt='foto_mempelai_wanita' style={{ width: "100%",height: "100%", borderRadius: "50%"}} />
+                        </Box>  
+                    </Box>
+                          
+                    </Box>
+                </ThemeProvider>
                 
-            
+                <EmptyBox theme={theme} emptyBoxStyles={{height: "2vh"}} />
+
+                <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
+                    <Box>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="namaMempelaiText">Cintya Aulia Putri, S.Pd</Typography>    
+                        </ThemeProvider>    
+                    </Box>
+                    <Box sx={{width: "98%"}}>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant='anakDariText'>Putri dari Bapak Suliono</Typography>    
+                        </ThemeProvider>    
+                    </Box>
+                    <Box sx={{ width: "80%"}}>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant='anakDariText'>& Ibu Wiwik Puji Astutik S.Pd</Typography>    
+                        </ThemeProvider>    
+                    </Box>
+                    
+                    <EmptyBox emptyBoxStyles={{height: {md: "20px"}}} />
+                    <Box>
+                        <InstagramLinkButton linkIg="https://instagram.com/_cicin/" />
+                    </Box>             
+                </Box>
+
+                <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: "4vh", empatLimaPuluh: "3vh", tujuhEnamDelapan: "2vh"}}} />
+                
+                    {/* mempelai pria */}
+                
+                <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <ThemeProvider theme={theme}>
+                        <Typography variant="danText">&</Typography>    
+                    </ThemeProvider>
+                    
+                </Box>   
+                
+                <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: "4vh", empatLimaPuluh: "3vh", tujuhEnamDelapan: "2vh"}}} />  
+                
+                <ThemeProvider theme={theme}>
+                    <Box sx={{
+                        height: {xs: "26vh",tigaTujuhLima: "32vh",empatLimaPuluh: "36vh", limaratus: "42vh",sm: "48vh", tujuhEnamDelapan: "300px"}, 
+                        width: "auto", 
+                        display: "flex", 
+                        justifyContent: "center", 
+                        alignItems: "center", 
+                        margin: "0 auto",
+                    }}>  
+                        <Box 
+                            sx={{
+                                height: {xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px",limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"},
+                                width: { xs: "150px", tigaTujuhLima: "170px", empatLimaPuluh: "190px", limaratus: "210px", sm: "230px", tujuhEnamDelapan: "250px"}
+                            }}>
+                            <Box sx={{width: "auto",height: "100%"}}>
+                                <img src='./img/content-page/mempelai-section/mempelai_pria.jpg' alt='foto_mempelai_pria' style={{ width: "100%",height: "100%", borderRadius: "50%"}} /> 
+                            </Box>          
+                        </Box>             
+                        
+                    </Box>
+                </ThemeProvider>
+                
+                <EmptyBox theme={theme} emptyBoxStyles={{height: "2vh"}} />
+
+                <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
+                    <Box>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant="namaMempelaiText">Handika Dwiyanto Putra, S.Pd</Typography>    
+                        </ThemeProvider>    
+                    </Box>
+                    <Box sx={{display: "flex",justifyContent: "center",alignItems: "center"}}>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant='anakDariText'>Putra  dari Bapak Haryanto</Typography>    
+                        </ThemeProvider>    
+                    </Box>
+                    <Box sx={{ width: "80%"}}>
+                        <ThemeProvider theme={theme}>
+                            <Typography variant='anakDariText'>& Ibu Tri Winarni</Typography>    
+                        </ThemeProvider>    
+                    </Box>
+                    <EmptyBox emptyBoxStyles={{height: {md: "20px"}}} />
+                    <Box>
+                        <InstagramLinkButton linkIg="https://www.instagram.com/handhikadp/"  />
+                    </Box>             
+                </Box>
+                    
+                <EmptyBox emptyBoxStyles={{height: "8vh"}} />
+            </Box>  
+
+            <Box sx={{boxSizing: "border-box",height: "100%", width:'100%', backgroundColor: "#E8D3C3", padding: "32px"}}>         
+                <ArRum theme={theme} />   
+            </Box>  
         </Box>
+        
     )
 }
 

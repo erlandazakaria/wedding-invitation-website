@@ -40,35 +40,35 @@ export default function BottomNav() {
             {/* boxes of icon below could be simplified by mapping an array of icon variable */}
 
             <Box sx={{display: "flex", flexDirection: "column"}}>
-              <IconButton color="#inherit" aria-label="open drawer" sx={{padding: 0}}>
+              <IconButton color="#inherit" aria-label="open drawer" sx={{padding: 0}} href='#home-section'>
                 <HomeIcon sx={iconStyles} />
               </IconButton>
               <Typography variant='caption' sx={iconTextStyles}>Home</Typography>
             </Box>
 
             <Box sx={{display: "flex", flexDirection: "column"}}>
-              <IconButton color="inherit" sx={{padding: 0}}>
+              <IconButton color="inherit" sx={{padding: 0}} href='#mempelai-section'>
                 <PeopleIcon sx={iconStyles} />
               </IconButton>
               <Typography variant='caption' sx={iconTextStyles}>Mempelai</Typography>
             </Box>
             
             <Box sx={{display: "flex", flexDirection: "column"}}>
-              <IconButton color="inherit" sx={{padding: 0}}>
+              <IconButton color="inherit" sx={{padding: 0}} href='#acara-section'>
                 <CalendarMonthIcon sx={iconStyles} />
               </IconButton>
               <Typography variant='caption' sx={iconTextStyles}>Acara</Typography>
             </Box>
 
             <Box sx={{display: "flex", flexDirection: "column"}}>
-              <IconButton color="inherit" sx={{padding: 0}}>
+              <IconButton color="inherit" sx={{padding: 0}} href='#galeri-section'>
                 <CollectionsIcon  sx={iconStyles} />
               </IconButton>
               <Typography variant='caption' sx={iconTextStyles}>Galeri</Typography>
             </Box>
 
             <Box sx={{display: "flex", flexDirection: "column"}}>
-              <IconButton color="inherit" sx={{padding: 0}}>
+              <IconButton color="inherit" sx={{padding: 0}} href='#pesan-untuk-kami-section'>
                 <ForumIcon sx={iconStyles} />
               </IconButton>
               <Typography variant='caption' sx={iconTextStyles}>Ucapan</Typography>

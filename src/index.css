@@ -10,7 +10,18 @@
 /* for " & " text font family */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+/* ar-rum text font family */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap');
+
+/* cerita kami box text */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
 /* background color: #FFF7F5 */
+
+/* angpao & hadiah text header */
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+
+/* rekening text */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 html, body {
   /* margin: 0;
