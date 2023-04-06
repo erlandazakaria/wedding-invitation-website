@@ -175,12 +175,12 @@ function Home() {
     setIsMuted(false);
   }
 
-  useEffect(() => {
-    if(isMuted === false) {
-      fixAutoPlay.current.play()  
-    }
-    return
-  },[isMuted])
+  // useEffect(() => {
+  //   if(isMuted === false) {
+  //     fixAutoPlay.current.play()  
+  //   }
+  //   return
+  // },[isMuted])
 
   return (
     <Box style={{margin: 0, padding: 0}}>

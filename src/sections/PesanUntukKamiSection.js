@@ -128,7 +128,7 @@ function PesanUntukKamiSection () {
         }
     })
 
-    const sortedData = Object.entries(collectionOfComments).reverse().slice((page - 1) * 5  , page * 5);
+    const sortedData = collectionOfComments.reverse().slice((page - 1) * 5  , page * 5);
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -139,6 +139,9 @@ function PesanUntukKamiSection () {
         let db = getDatabase();
         let users = ref(db, 'users/')
         onValue(users, (snapshot) => {
+            // Object.keys(snapshot.val())
+        //    let newFormat = snapshot.val().map(({nama, ucapan, waktu} ) => (nama, ucapan, waktu));
+        //    console.log(newFormat)
             if (snapshot.val() === null) {
                 return;
             } else {
@@ -280,19 +283,19 @@ function PesanUntukKamiSection () {
                         {
                             sortedData.map((data,index) => {
                                 let timeDiff = null;
-                                if (data[1].waktu) {
-                                    timeDiff = moment(data[1].waktu).fromNow(); // 3.5
+                                if (data.waktu) {
+                                    timeDiff = moment(data.waktu).fromNow(); // 3.5
                                 }
                                 return (
                                 <Box key={index} sx={{borderBottom: "1px dotted #c4ced0"}}>
                                      <Box sx={{padding: "10px 15px 0"}}>
                                         <ThemeProvider theme={theme}>
                                             <Box>
-                                                <Typography variant='namaPengirim'>{data[1].nama}</Typography>
+                                                <Typography variant='namaPengirim'>{data.nama}</Typography>
                                             </Box> 
 
                                             <Box sx={{marginBottom: "4px"}}>
-                                                <Typography variant='ucapanDariPengirim'>{data[1].ucapan}</Typography>
+                                                <Typography variant='ucapanDariPengirim'>{data.ucapan}</Typography>
                                             </Box>
                                             {timeDiff && <Box sx={{display: "flex", alignItems: "center"}}>
                                                 <AccessTimeIcon sx={{fontSize: "1.2rem"}} />
