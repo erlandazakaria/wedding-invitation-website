@@ -107,50 +107,48 @@ function ProtokolKesehatan () {
         justifyContent: "center"
     }
     return (
-        <Box sx={{height: "100%", backgroundColor: "#FFF7F5"}}>
-            <EmptyBox emptyBoxStyles={{height: "50px"}} />
-            <Box>
-
-                <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+            <Box sx={{height: "100%", backgroundColor: "#FFF7F5"}}>
+                <EmptyBox emptyBoxStyles={{height: "50px"}} />
+                <Box>
                     <Box sx={{textAlign: "center"}}>
                         <Typography variant='sectionHeader'>Protokol Kesehatan</Typography>
                     </Box>    
-                </ThemeProvider>
-                
-                <EmptyBox emptyBoxStyles={{height: "20px"}} />
 
-                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <ThemeProvider theme={theme}>
+                    <EmptyBox emptyBoxStyles={{height: "20px"}} />
+
+                    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
+                        
                         <Box sx={{textAlign: "center", width: {xs: "80%", tigaEnamPuluh: "75%"},textIndent: {xs: "6px", tigaEnamPuluh: 0}}}>
                             <Typography variant='gunaMencegah'>Guna mencegah penyebaran Covid-19, diharapkan bagi tamu undangan untuk mematuhi Protokol Kesehatan di bawah ini :</Typography>
                         </Box>    
-                    </ThemeProvider>
+                    
+                    </Box>
+
+                    <EmptyBox emptyBoxStyles={{height: "60px"}} />   
+
+                    <Box sx={iconContainerStyles}>
+                        {
+                            prokesPGN.map((prokesIcon, index) => ( 
+                                prokesIcon.type === "icon" 
+                                    ?   <ProkesIcon 
+                                        key={index}
+                                        theme={theme} 
+                                        imgLink={prokesIcon.icon.img}
+                                        iconText={prokesIcon.icon.iconText}
+                                        alt={prokesIcon.icon.alt} />    
+                                    :   <Box key={index} sx={{height: "100%", width: { md: "20px", lg: "120px" }}}></Box>    
+                            ))
+                        }
+                    </Box>
+                    
                 </Box>
 
-                <EmptyBox emptyBoxStyles={{height: "60px"}} />   
-
-                <Box sx={iconContainerStyles}>
-                    {
-                        prokesPGN.map((prokesIcon, index) => ( 
-                            prokesIcon.type === "icon" 
-                                ?   <ProkesIcon 
-                                    key={index}
-                                    theme={theme} 
-                                    imgLink={prokesIcon.icon.img}
-                                    iconText={prokesIcon.icon.iconText}
-                                    alt={prokesIcon.icon.alt} />    
-                                :   <ThemeProvider theme={theme} key={index}>
-                                        <Box sx={{height: "100%", width: { md: "20px", lg: "120px" }}}></Box>    
-                                    </ThemeProvider>
-                        ))
-                    }
-                </Box>
+                <EmptyBox emptyBoxStyles={{height: "100px"}} />
                 
-            </Box>
-
-            <EmptyBox emptyBoxStyles={{height: "100px"}} />
-            
-        </Box>
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 

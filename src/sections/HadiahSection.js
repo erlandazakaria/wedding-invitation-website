@@ -113,7 +113,7 @@ function AngpaoDanHadiahSection () {
             <Box sx={{boxSizing: "border-box", height: "2px", border: "2px solid #E8D3C3"}}></Box>
 
             
-            <Box sx={firstWrapperStyles}>
+            <Box id="hadiah-section" sx={firstWrapperStyles}>
                 <EmptyBox emptyBoxStyles={{height: "30px"}} />
                 <Box sx={belowFirstWrapperStyles}>
                     <Box sx={{headerAndIconStyles}}>

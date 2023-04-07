@@ -62,54 +62,52 @@ function CeritaKamiSection () {
     ];
 
     return (
-        <Box sx={{boxSizing: "border-box", height: "100%",backgroundImage: "url('./img/BAHAN-TEMA-08-NAMA-3-scaled-1.jpg')", backgroundSize: "cover"}}>
-            <Box sx={{height: "14%",display: "flex", flexDirection: "column",justifyContent: "center", alignItems: "center"}}>
-                <Box sx={ceritaKamiTitleStyle}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='title'>Cerita Kami</Typography>
-                    </ThemeProvider>    
+        <ThemeProvider theme={theme}>
+            <Box sx={{boxSizing: "border-box", height: "100%",backgroundImage: "url('./img/BAHAN-TEMA-08-NAMA-3-scaled-1.jpg')", backgroundSize: "cover"}}>
+                <Box sx={{height: "14%",display: "flex", flexDirection: "column",justifyContent: "center", alignItems: "center"}}>
+                    <Box sx={ceritaKamiTitleStyle}>
+                         <Typography variant='title'>Cerita Kami</Typography>
+                    </Box>
+                
+                <EmptyBox emptyBoxStyles={{height: "50px", width: "100%"}} />    
                 </Box>
-               
-            <EmptyBox emptyBoxStyles={{height: "50px", width: "100%"}} />    
-            </Box>
-            
-
-            <Box sx={{boxSizing: "border-box", height: "86%", padding: "0 24px"}}>
-                {isScreenAt768Px 
-                    ? ceritaText.map((cerita,index) => {
-                        if(index % 2 === 0) {
-                            return (
-                                <Box key={index} sx={{width: "100%", display: "flex",}}>
-                                    <Box sx={{ width: "50%"}}></Box>
-                                    <CeritaBox 
-                                        theme={theme} 
-                                        containerStyles={{boxSizing: "border-box", display: "flex", width: "50%"}}
-                                        ceritaHeader={cerita.header}
-                                        ceritaContent={cerita.content}  />             
-                                </Box>
-                            )
-                        } else {
-                            return (
-                                <Box sx={{width: "100%", display: "flex",}} key={index}>
-                                    <CeritaBox 
-                                        theme={theme} 
-                                        containerStyles={{boxSizing: "border-box", display: "flex", width: "50%"}} 
-                                        ceritaHeader={cerita.header}
-                                        ceritaContent={cerita.content}   />
-                                    <Box sx={{width: "50%"}}></Box>
-                                </Box>
-                            )
-                            
-                        }})
-                    :   ceritaText.map((cerita, index) => <CeritaBox key={index} theme={theme} containerStyles={{boxSizing: "border-box", display: "flex", marginBottom: "24px"}}  ceritaHeader={cerita.header} ceritaContent={cerita.content}   />)
-                    
-                    
-                }
                 
 
-               
-            </Box>
-        </Box>
+                <Box sx={{boxSizing: "border-box", height: "86%", padding: "0 24px"}}>
+                    {isScreenAt768Px 
+                        ? ceritaText.map((cerita,index) => {
+                            if(index % 2 === 0) {
+                                return (
+                                    <Box key={index} sx={{width: "100%", display: "flex",}}>
+                                        <Box sx={{ width: "50%"}}></Box>
+                                        <CeritaBox 
+                                            theme={theme} 
+                                            containerStyles={{boxSizing: "border-box", display: "flex", width: "50%"}}
+                                            ceritaHeader={cerita.header}
+                                            ceritaContent={cerita.content}  />             
+                                    </Box>
+                                )
+                            } else {
+                                return (
+                                    <Box sx={{width: "100%", display: "flex",}} key={index}>
+                                        <CeritaBox 
+                                            theme={theme} 
+                                            containerStyles={{boxSizing: "border-box", display: "flex", width: "50%"}} 
+                                            ceritaHeader={cerita.header}
+                                            ceritaContent={cerita.content}   />
+                                        <Box sx={{width: "50%"}}></Box>
+                                    </Box>
+                                )
+                                
+                            }})
+                        :   ceritaText.map((cerita, index) => <CeritaBox key={index} theme={theme} containerStyles={{boxSizing: "border-box", display: "flex", marginBottom: "24px"}}  ceritaHeader={cerita.header} ceritaContent={cerita.content}   />)
+                        
+                        
+                    }
+                </Box>
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 

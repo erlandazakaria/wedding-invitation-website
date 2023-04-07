@@ -128,7 +128,7 @@ function PesanUntukKamiSection () {
         }
     })
 
-    const sortedData = collectionOfComments.reverse().slice((page - 1) * 5  , page * 5);
+    const sortedData = Object.entries(collectionOfComments).reverse().slice((page - 1) * 5  , page * 5);
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -139,9 +139,6 @@ function PesanUntukKamiSection () {
         let db = getDatabase();
         let users = ref(db, 'users/')
         onValue(users, (snapshot) => {
-            // Object.keys(snapshot.val())
-        //    let newFormat = snapshot.val().map(({nama, ucapan, waktu} ) => (nama, ucapan, waktu));
-        //    console.log(newFormat)
             if (snapshot.val() === null) {
                 return;
             } else {
@@ -152,180 +149,169 @@ function PesanUntukKamiSection () {
     },[])
 
     return (
-        <Box style={{height: "100%", boxSizing: "border-box", backgroundColor: "#E8D3C3"}} id="pesan-untuk-kami-section">
-           <Box sx={{textAlign: "center", marginBottom: "20px"}}>
-
-            <EmptyBox emptyBoxStyles={{height:"24px"}} />
-            
-            <ThemeProvider theme={theme}>
-                <Box>
-                    <Typography variant='sectionHeader'>
-                        Pesan untuk kami
-                    </Typography>    
-                </Box>
-                <EmptyBox emptyBoxStyles={{height:"4px"}} />
-                <Typography variant='berikanUcapan'>
+        <ThemeProvider theme={theme}>
+            <Box style={{height: "100%", boxSizing: "border-box", backgroundColor: "#E8D3C3"}} id="pesan-untuk-kami-section">
+                <Box sx={{textAlign: "center", marginBottom: "20px"}}>
+                    <EmptyBox emptyBoxStyles={{height:"24px"}} />
+                    <Box>
+                        <Typography variant='sectionHeader'>
+                            Pesan untuk kami
+                        </Typography>    
+                    </Box>
+                    <EmptyBox emptyBoxStyles={{height:"4px"}} />
+                    <Typography variant='berikanUcapan'>
                         Berikan Ucapan & Doa Restu
                     </Typography>    
-               
-            </ThemeProvider>
-                
-            </Box> 
-            <Box sx={{height: "100%", padding: {xs: "20px", sm: "20px 40px", lg: "20px 60px"}}}>
+                </Box> 
+                <Box sx={{height: "100%", padding: {xs: "20px", sm: "20px 40px", lg: "20px 60px"}}}>
 
-                {/* chatbox */}
-                <Box sx={{ height: "100%", backgroundColor: "#F5F3EE", borderRadius: "12px"}}>
-                    <ThemeProvider theme={theme}>
+                    {/* chatbox */}
+                    <Box sx={{ height: "100%", backgroundColor: "#F5F3EE", borderRadius: "12px"}}>
                         <Box sx={{textAlign: "center", padding: "10px 0"}}>
                             <Typography 
                             variant='totalComment'
                             > 
 
-                                {collectionOfComments === [] ? "0 " : `${Object.entries(collectionOfComments).length} `}
-                                 Comments
+                                {collectionOfComments === [] ? "0 " : `${collectionOfComments.length} `}
+                                Comments
 
                             </Typography>       
                         </Box>
-                         
-                    </ThemeProvider>
-                    
-
-                    <Box sx={{boxSizing: "border-box", borderTop: "1px solid #c4ced0",borderBottom: "1px solid #c4ced0", padding: "15px" }}>
-
-                        <form onSubmit={formik.handleSubmit}>
-                            <Box >
-                                <TextField 
-                                    id="nama" 
-                                    name='nama' 
-                                    label="Nama" 
-                                    variant='filled' 
-                                    value={formik.values.nama}
-                                    onChange={formik.handleChange}
-                                    error={formik.touched.nama && Boolean(formik.errors.nama)}
-                                    helperText={formik.touched.nama && formik.errors.nama} 
-                                    inputProps={{sx:{backgroundColor: "#fff", borderRadius: "8px", "&.MuiInputLabel-root":{fontFamily: "Alegreya}"}}}}
-                                    size='small'
-                                    fullWidth
-                                    >
-                                    
-                                </TextField>
-                            </Box>
-
-                            <EmptyBox emptyBoxStyles={{height: "20px", }} />
-
-                            <Box>
-                                <TextField 
-                                    id='ucapan' 
-                                    name='ucapan' 
-                                    label="Ucapan" 
-                                    variant='filled' 
-                                    value={formik.values.ucapan}
-                                    
-                                    onChange={formik.handleChange}
-                                    error={formik.touched.ucapan && Boolean(formik.errors.ucapan)}
-                                    helperText={formik.touched.ucapan && formik.errors.ucapan}
-                                    InputProps={{sx: { backgroundColor: "#fff", borderRadius: "8px", "&.Mui-focused": {backgroundColor: "#fff"}}}}
-                                    size='small'
-                                    fullWidth>
-                                </TextField>                    
-                            </Box>
-
-                            <EmptyBox emptyBoxStyles={{height: "20px", }} />
-
-                            <Box>
-                                <FormControl fullWidth >
+                            
+                        <Box sx={{boxSizing: "border-box", borderTop: "1px solid #c4ced0",borderBottom: "1px solid #c4ced0", padding: "15px" }}>
+                            <form onSubmit={formik.handleSubmit}>
+                                <Box >
                                     <TextField 
-                                        id="kehadiran" 
-                                        name='kehadiran'
-                                        select 
-                                        sx={{width: "100%"}} 
-                                        label="Konfirmasi Kehadiran" 
-                                        value={formik.values.kehadiran}
+                                        id="nama" 
+                                        name='nama' 
+                                        label="Nama" 
+                                        variant='filled' 
+                                        value={formik.values.nama}
                                         onChange={formik.handleChange}
-                                        error={formik.touched.kehadiran && Boolean(formik.errors.kehadiran)}
-                                        helperText={formik.touched.kehadiran && formik.errors.kehadiran}
+                                        error={formik.touched.nama && Boolean(formik.errors.nama)}
+                                        helperText={formik.touched.nama && formik.errors.nama} 
+                                        inputProps={{sx:{backgroundColor: "#fff", borderRadius: "8px", "&.MuiInputLabel-root":{fontFamily: "Alegreya}"}}}}
                                         size='small'
-                                        InputProps={{sx: {height: "60px", backgroundColor: "#fff", borderRadius: "8px",color: "black", fontFamily: "Alegreya",
-                                         "&.Mui-focused": {backgroundColor: "#fff"},
-                                         "&.Mui-focus": {backgroundColor: "#fff"}, 
-                                         "&.MuiFilledInput-root:hover": {backgroundColor: "#fff"}, 
-                                         "&.MuiFilledInput-root:focus": {backgroundColor: "#fff"}, 
+                                        fullWidth
+                                        >
                                         
-                                        }}}
-                                         
-                                        variant='filled'>
-                                        <MenuItem label="Hadir" value="hadir" sx={{fontFamily: "Alegreya", backgroundColor: "#fff"}}>Hadir</MenuItem>  
-                                        <MenuItem label="Tidak Hadir" value="tidak hadir" sx={{fontFamily: "Alegreya"}}>Tidak Hadir</MenuItem>  
-                                    </TextField>  
-                                </FormControl>
-                            </Box>
+                                    </TextField>
+                                </Box>
 
-                            <EmptyBox emptyBoxStyles={{height: "30px", }} />
-                            
-                            <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                <Button variant='contained' type='submit' sx={{
-                                    fontSize: {xs: "0.9rem", sm: "1.1rem", md: "1.3rem"}, textTransform: "capitalize",
-                                    backgroundColor: "#7B6945", 
-                                    padding: "4px 25px",
-                                    "&:hover": {boxShadow: "0 0 5px 5px #424242", transform: "scale(1.1)"}
-                                    
-                                    }}>Kirim
-                                </Button>        
-                            </Box>
-                            
-                        </form>
-                       
+                                <EmptyBox emptyBoxStyles={{height: "20px", }} />
 
-                    </Box>
+                                <Box>
+                                    <TextField 
+                                        id='ucapan' 
+                                        name='ucapan' 
+                                        label="Ucapan" 
+                                        variant='filled' 
+                                        value={formik.values.ucapan}
+                                        
+                                        onChange={formik.handleChange}
+                                        error={formik.touched.ucapan && Boolean(formik.errors.ucapan)}
+                                        helperText={formik.touched.ucapan && formik.errors.ucapan}
+                                        InputProps={{sx: { backgroundColor: "#fff", borderRadius: "8px", "&.Mui-focused": {backgroundColor: "#fff"}}}}
+                                        size='small'
+                                        fullWidth>
+                                    </TextField>                    
+                                </Box>
 
-                    
-                    <Box sx={{height: "200px", overflow: "scroll"}}>
-                        {
-                            sortedData.map((data,index) => {
-                                let timeDiff = null;
-                                if (data.waktu) {
-                                    timeDiff = moment(data.waktu).fromNow(); // 3.5
-                                }
-                                return (
-                                <Box key={index} sx={{borderBottom: "1px dotted #c4ced0"}}>
-                                     <Box sx={{padding: "10px 15px 0"}}>
-                                        <ThemeProvider theme={theme}>
+                                <EmptyBox emptyBoxStyles={{height: "20px", }} />
+
+                                <Box>
+                                    <FormControl fullWidth >
+                                        <TextField 
+                                            id="kehadiran" 
+                                            name='kehadiran'
+                                            select 
+                                            sx={{width: "100%"}} 
+                                            label="Konfirmasi Kehadiran" 
+                                            value={formik.values.kehadiran}
+                                            onChange={formik.handleChange}
+                                            error={formik.touched.kehadiran && Boolean(formik.errors.kehadiran)}
+                                            helperText={formik.touched.kehadiran && formik.errors.kehadiran}
+                                            size='small'
+                                            InputProps={{sx: {height: "60px", backgroundColor: "#fff", borderRadius: "8px",color: "black", fontFamily: "Alegreya",
+                                            "&.Mui-focused": {backgroundColor: "#fff"},
+                                            "&.Mui-focus": {backgroundColor: "#fff"}, 
+                                            "&.MuiFilledInput-root:hover": {backgroundColor: "#fff"}, 
+                                            "&.MuiFilledInput-root:focus": {backgroundColor: "#fff"}, 
+                                            
+                                            }}}
+                                            
+                                            variant='filled'>
+                                            <MenuItem label="Hadir" value="hadir" sx={{fontFamily: "Alegreya", backgroundColor: "#fff"}}>Hadir</MenuItem>  
+                                            <MenuItem label="Tidak Hadir" value="tidak hadir" sx={{fontFamily: "Alegreya"}}>Tidak Hadir</MenuItem>  
+                                        </TextField>  
+                                    </FormControl>
+                                </Box>
+
+                                <EmptyBox emptyBoxStyles={{height: "30px", }} />
+                                
+                                <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                    <Button variant='contained' type='submit' sx={{
+                                        fontSize: {xs: "0.9rem", sm: "1.1rem", md: "1.3rem"}, textTransform: "capitalize",
+                                        backgroundColor: "#7B6945", 
+                                        padding: "4px 25px",
+                                        "&:hover": {boxShadow: "0 0 5px 5px #424242", transform: "scale(1.1)"}
+                                        
+                                        }}>Kirim
+                                    </Button>        
+                                </Box>
+                                
+                            </form>
+                        </Box>
+
+                        
+                        <Box sx={{height: "200px", overflow: "scroll"}}>
+                            {
+                                sortedData.map((data,index) => {
+                                    let timeDiff = null;
+                                    if (data[1].waktu) {
+                                        timeDiff = moment(data[1].waktu).fromNow(); // 3.5
+                                    }
+                                    return (
+                                    <Box key={index} sx={{borderBottom: "1px dotted #c4ced0"}}>
+                                        <Box sx={{padding: "10px 15px 0"}}>
+                                           
                                             <Box>
-                                                <Typography variant='namaPengirim'>{data.nama}</Typography>
+                                                <Typography variant='namaPengirim'>{data[1].nama}</Typography>
                                             </Box> 
 
                                             <Box sx={{marginBottom: "4px"}}>
-                                                <Typography variant='ucapanDariPengirim'>{data.ucapan}</Typography>
+                                                <Typography variant='ucapanDariPengirim'>{data[1].ucapan}</Typography>
                                             </Box>
                                             {timeDiff && <Box sx={{display: "flex", alignItems: "center"}}>
                                                 <AccessTimeIcon sx={{fontSize: "1.2rem"}} />
                                                 <EmptyBox emptyBoxStyles={{height: "100%", width: "3px"}} />
                                                 <Typography variant='ucapanDariPengirim'>{timeDiff}</Typography>
                                             </Box> }
-                                        </ThemeProvider>
-                                    </Box>
-                                </Box>)
-                            })  
-                        }
-                        
-                    </Box>
-                    <EmptyBox emptyBoxStyles={{height: "12px"}} />
-                    <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        <Stack spacing={5}>
-                            {
-                                isScreenAt425Px 
-                                    ? <Pagination count={10} page={page} onChange={handleChangePage} variant='outlined' />
-                                    : <Pagination count={10} page={page} onChange={handleChangePage} size='small' variant='outlined' />         
+                                            
+                                        </Box>
+                                    </Box>)
+                                })  
                             }
                             
-                        </Stack>    
+                        </Box>
+                        <EmptyBox emptyBoxStyles={{height: "12px"}} />
+                        <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                            <Stack spacing={5}>
+                                {
+                                    isScreenAt425Px 
+                                        ? <Pagination count={10} page={page} onChange={handleChangePage} variant='outlined' />
+                                        : <Pagination count={10} page={page} onChange={handleChangePage} size='small' variant='outlined' />         
+                                }
+                                
+                            </Stack>    
+                        </Box>
+                        <EmptyBox emptyBoxStyles={{height: "10px"}} />
+                        
                     </Box>
-                    <EmptyBox emptyBoxStyles={{height: "10px"}} />
-                    
-                    
                 </Box>
-            </Box>
-        </Box>
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 

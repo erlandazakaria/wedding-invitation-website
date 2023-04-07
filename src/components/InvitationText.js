@@ -1,35 +1,21 @@
 import { Box, Typography, ThemeProvider } from '@mui/material';
-// import SaveTheDateButton from './SaveTheDateButton';
-function InvitationText ({ theme, backgroundColor}) {
-    // const saveTheDateButtonStyle = {
-    //     boxStyles: {marginTop: "24px"}, 
-    //     buttonStyles: {padding: "4px 8px", textTransform: "capitalize", borderRadius: "8px", backgroundColor: "#424242"}
-    // }
-    return (
-        <Box style={{height: "26vh", textAlign: "center", backgroundColor: backgroundColor}}>
-                <Box >
-                    <ThemeProvider theme={theme}>
-                    <Typography variant='weInviteYou' >We invite you to celebrate our wedding</Typography>
-                    </ThemeProvider>
-                </Box>
-                <Box style={{marginBottom: "8px"}}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='testText' style={{ boxSizing: "border-box"}}>Cintya & Handika</Typography>  
-                    </ThemeProvider>    
-                </Box>
-                
-                <Box style={{marginBottom: "8px"}}>
-                    <ThemeProvider theme={theme}>
-                        <Typography variant='weInviteYou' >Kamis, 11 Mei 2023</Typography>
-                    </ThemeProvider>    
-                </Box>
 
-                {/* {backgroundColor 
-                    ? null 
-                    : <SaveTheDateButton theme={theme} saveTheDateButtonStyle={saveTheDateButtonStyle} />
-                      } */}
-                
-            </Box>
+function InvitationText ({ theme, backgroundColor}) {
+    return (
+        <ThemeProvider theme={theme}>
+            <Box style={{height: "26vh", textAlign: "center", backgroundColor: backgroundColor}}>
+                <Box >
+                    <Typography variant='weInviteYou' >We invite you to celebrate our wedding</Typography>
+                </Box>
+                <Box style={{marginBottom: "8px"}}>
+                    <Typography variant='testText' style={{ boxSizing: "border-box"}}>Cintya & Handika</Typography>  
+                </Box>
+                <Box style={{marginBottom: "8px"}}>
+                    <Typography variant='weInviteYou' >Kamis, 11 Mei 2023</Typography>
+                </Box>
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 

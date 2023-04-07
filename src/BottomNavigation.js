@@ -7,6 +7,7 @@ import { Box, AppBar, CssBaseline, Toolbar, Typography, createTheme, ThemeProvid
 
 import HomeIcon from '@mui/icons-material/Home';
 import ForumIcon from '@mui/icons-material/Forum';
+import EmailIcon from '@mui/icons-material/Email';
 
 const theme = createTheme({
   palette: {
@@ -65,6 +66,13 @@ export default function BottomNav() {
                 <CollectionsIcon  sx={iconStyles} />
               </IconButton>
               <Typography variant='caption' sx={iconTextStyles}>Galeri</Typography>
+            </Box>
+
+            <Box sx={{display: "flex", flexDirection: "column"}}>
+              <IconButton color="inherit" sx={{padding: 0}} href='#hadiah-section'>
+                <EmailIcon sx={iconStyles} />
+              </IconButton>
+              <Typography variant='caption' sx={iconTextStyles}>Angpao</Typography>
             </Box>
 
             <Box sx={{display: "flex", flexDirection: "column"}}>

@@ -50,8 +50,8 @@ function Slider () {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
-        <Box sx={{ boxSizing: "border-box",height: "100%", padding: {md: "0 100px", lg: "0 200px"}}}>
-            <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+            <Box sx={{ boxSizing: "border-box",height: "100%", padding: {md: "0 100px", lg: "0 200px"}}}>
                 <Box sx={{ height: {xs: "250px", tujuhEnamDelapan: "450px"}}}>
                     <Swiper 
                         style={{"--swiper-navigation-color": "#fff"}}
@@ -77,37 +77,33 @@ function Slider () {
                         }
                     </Swiper>    
                 </Box>    
-            </ThemeProvider>
-            
+                
                 <EmptyBox emptyBoxStyles={{height: "32px"}} />
-            
-            <ThemeProvider theme={theme}>
                 <Box sx={{height: {xs: "50px", tigaTujuhLima: "68px", empatLimaPuluh: "80px", limaratus: "90px", enamratuslimapuluh: "100px",md: "160px"}}}>
-                    <ThemeProvider theme={theme}>
-                        <Swiper
-                        onSwiper={setThumbsSwiper}
-                        spaceBetween={10}
-                        slidesPerView={3}
-                        freeMode={true}
-                        watchSlidesProgress={true}
-                        className="mySwiper"
-                        loop={true}
-                        modules={[FreeMode, Navigation, Thumbs]}>
-                            {
-                                cicinPhotos.map((photo, index) => (
-                                    <SwiperSlide key={index}>
-                                        <img src={photo.photo} alt={photo.alt} />
-                                    </SwiperSlide>  
-                                ))
-                            }
-                            
-                        </Swiper>
-                    </ThemeProvider>
+                    <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={10}
+                    slidesPerView={3}
+                    freeMode={true}
+                    watchSlidesProgress={true}
+                    className="mySwiper"
+                    loop={true}
+                    modules={[FreeMode, Navigation, Thumbs]}>
+                        {
+                            cicinPhotos.map((photo, index) => (
+                                <SwiperSlide key={index}>
+                                    <img src={photo.photo} alt={photo.alt} />
+                                </SwiperSlide>  
+                            ))
+                        }
+                        
+                    </Swiper>
                 </Box>
-            </ThemeProvider>
-           
-            <EmptyBox emptyBoxStyles={{height: "12px"}} />
-        </Box>
+            
+                <EmptyBox emptyBoxStyles={{height: "12px"}} />
+            </Box>    
+        </ThemeProvider>
+        
         
     )
 }
