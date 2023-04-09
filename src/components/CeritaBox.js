@@ -25,30 +25,27 @@ function CeritaBox ({ theme, containerStyles, ceritaHeader, ceritaContent }) {
         color: "#6C6C6C",
     }
     return (
-        <Box sx={containerStyles}>
-            <Box>
-                <EmptyBox emptyBoxStyles={{height: "8px"}} />
-                <Box sx={heartIconContainerStyle}>
-                    <ThemeProvider theme={theme}>
-                        <FavoriteIcon color="heartShapeIcon" />    
-                    </ThemeProvider>
+        <ThemeProvider theme={theme}>
+            <Box sx={containerStyles}>
+                <Box>
+                    <EmptyBox emptyBoxStyles={{height: "8px"}} />
+                    <Box sx={heartIconContainerStyle}>
+                        <FavoriteIcon color="heartShapeIcon" /> 
+                    </Box>
                 </Box>
-            </Box>
-            
-            <Box sx={ceritaBoxStyle}>
-                <ThemeProvider theme={theme}>
+                
+                <Box sx={ceritaBoxStyle}>
                     <Typography variant='ceritaHeader'>{ceritaHeader}</Typography>
-                </ThemeProvider>
-                <EmptyBox emptyBoxStyles={{height: "8px"}} />
-                <ThemeProvider theme={theme}>
+                    <EmptyBox emptyBoxStyles={{height: "8px"}} />
                     <Box sx={{height: "100%", lineHeight: 1.3}}>
                         <Typography variant='ceritaContent'>
                             {ceritaContent}
                         </Typography>    
-                    </Box>                  
-                </ThemeProvider>
-            </Box>
-        </Box>
+                    </Box>     
+                </Box>
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 

@@ -85,19 +85,17 @@ function AcaraSection () {
         }
     ]
     return (
-        <Box sx={containerStyles} id="acara-section">
-             <Box sx={acaraBoxStyles}>
-                <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+            <Box sx={containerStyles} id="acara-section">
+                <Box sx={acaraBoxStyles}>
                     {
                         acaraText[0].akad.map((akad, index)=> (<Typography key={index} variant={akad.variant} sx={{margin: akad.haveMargin ? "12px auto 8px" : null}}>{akad.text}</Typography>))
                     }
-                </ThemeProvider>
-            </Box>
+                </Box>
 
-            <EmptyBox emptyBoxStyles={{height: "30px"}} />
+                <EmptyBox emptyBoxStyles={{height: "30px"}} />
 
-            <Box sx={acaraBoxStyles}>
-                <ThemeProvider theme={theme}>
+                <Box sx={acaraBoxStyles}>
                     {
                         acaraText[1].resepsi.map((resepsi, index) => (
                             <Typography 
@@ -108,28 +106,41 @@ function AcaraSection () {
                                 {resepsi.text}
                                 
                             </Typography>))
-                    }  
-                </ThemeProvider>
-            </Box>
-
-            <EmptyBox emptyBoxStyles={{height: "32px"}} />
-            
-            <Box sx={{display: "flex", justifyContent: "center"}}>
-                <Box>
-                        <Button variant='contained' sx={{ boxSizing: "border-box",padding: "6px 8px", borderRadius: "12px", backgroundColor: "#E8D3C3", border: "2px solid #fff",
-                         "&:hover": {transform: "scale(1.3)", color: "white", backgroundColor: "#424242"} }}>
-                            <LocationOnIcon sx={{fontSize: "18px", color: "#6C6C6C", "&:hover": {color: "white"}}} />
-                            <ThemeProvider theme={theme}>
-                                <Typography variant='lihatLokasi' sx={{"&:hover": {color: "white"}}}>
-                                    <Link to="https://goo.gl/maps/wcuHSPC4g27xmGkR9" style={{textDecoration: "none", color: "inherit"}}>Lihat Lokasi</Link></Typography>
-                            </ThemeProvider>  
-                        </Button>
-                      
+                    }   
                 </Box>
-            </Box>
-            
-            
-        </Box>
+
+                <EmptyBox emptyBoxStyles={{height: "32px"}} />
+                
+                <Box sx={{display: "flex", justifyContent: "center"}}>
+                    <Box>
+                        <Button 
+                            variant='contained' 
+                            sx={{ 
+                                boxSizing: "border-box",
+                                padding: "6px 8px", 
+                                borderRadius: "12px", 
+                                backgroundColor: "#E8D3C3", 
+                                border: "2px solid #fff",
+                                "&:hover": 
+                                    {
+                                        transform: "scale(1.3)", 
+                                        color: "white", 
+                                        backgroundColor: "#424242"
+                                    } 
+                            }}>
+                            <LocationOnIcon sx={{fontSize: "18px", color: "#6C6C6C", "&:hover": {color: "white"}}} />
+                            <Typography variant='lihatLokasi' sx={{"&:hover": {color: "white"}}}>
+                                <Link to="https://goo.gl/maps/wcuHSPC4g27xmGkR9" style={{textDecoration: "none", color: "inherit"}}>Lihat Lokasi</Link>
+                            </Typography>     
+                        </Button>
+                        
+                    </Box>
+                </Box>
+                
+                
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 

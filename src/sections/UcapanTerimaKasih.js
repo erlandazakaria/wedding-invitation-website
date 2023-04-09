@@ -73,63 +73,53 @@ const theme = createTheme({
 
 function UcapanTerimaKasih () {
     return (
-        <Box sx={{boxSizing: "border-box", height: "100%", backgroundImage: "url('/img/BAHAN-TEMA-08-NAMA-1-scaled-1.jpg')", backgroundSize: "cover", backgroundPosition: "bottom"}}>
-            <EmptyBox emptyBoxStyles={{height: {xs: "50px", md: "80px"}}} />
+        <ThemeProvider theme={theme}>
+            <Box sx={{boxSizing: "border-box", height: "100%", backgroundImage: "url('/img/BAHAN-TEMA-08-NAMA-1-scaled-1.jpg')", backgroundSize: "cover", backgroundPosition: "bottom"}}>
+                
+                <EmptyBox emptyBoxStyles={{height: {xs: "50px", md: "80px"}}} />
 
-            <ThemeProvider theme={theme}>
-                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
-                    <Box sx={{height: {xs: "180px", empatDuaLima: "210px", limaRatus: "250px", tujuhRatus: "300px", md: "350px"},
-                         width: {xs: "180px", empatDuaLima: "210px", limaRatus: "250px", tujuhRatus: "300px", md: "350px"}}}>
-                        <img src='/img/content-page/ucapan-section/2.jpg' alt='ucapan-section' height="100%" width="100%" style={{borderRadius: "50%"}} />    
-                    </Box> 
-                </Box>    
-            </ThemeProvider>
-            
-            <EmptyBox emptyBoxStyles={{height: {xs: "40px" }}} />
+                    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
+                        <Box sx={{height: {xs: "180px", empatDuaLima: "210px", limaRatus: "250px", tujuhRatus: "300px", md: "350px"},
+                            width: {xs: "180px", empatDuaLima: "210px", limaRatus: "250px", tujuhRatus: "300px", md: "350px"}}}>
+                            <img src='/img/content-page/ucapan-section/2.jpg' alt='ucapan-section' height="100%" width="100%" style={{borderRadius: "50%"}} />    
+                        </Box> 
+                    </Box>    
+                
+                <EmptyBox emptyBoxStyles={{height: {xs: "40px" }}} />
 
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
-                <ThemeProvider theme={theme}>
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
                     <Box sx={{width: {xs: "80%", limaEnamPuluh: "65%", tujuhRatus: "60%"}, display: "flex", justifyContent: "center"}}>
                             <Typography variant='merupakanSuatuKehormatan'>Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</Typography>
                     </Box> 
-                </ThemeProvider>   
-            </Box>
-            
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
-            <ThemeProvider theme={theme}>
-                <Box sx={{width: {xs: "80%", limaEnamPuluh: "65%",tujuhRatus: "60%"}, display: "flex", justifyContent: "center"}}>
-                    
-                        <Typography variant='merupakanSuatuKehormatan'>Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.</Typography>
-                   
+                       
                 </Box>
-                </ThemeProvider>
-            </Box>
-
-            <ThemeProvider theme={theme}>
-                <EmptyBox emptyBoxStyles={{height: {xs: "20px", empatDuaLima: "40px"}}} />        
-            </ThemeProvider>
                 
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
+                    <Box sx={{width: {xs: "80%", limaEnamPuluh: "65%",tujuhRatus: "60%"}, display: "flex", justifyContent: "center"}}>                   
+                        <Typography variant='merupakanSuatuKehormatan'>Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.</Typography>
+                    </Box>
+                </Box>
 
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
-                <Box sx={{width: "80%", display: "flex", justifyContent: "center",}}>
-                <ThemeProvider theme={theme}>
-                    <Typography variant='wassalamText'> Wassalamu'alaikum Wr. Wb.</Typography>
-                </ThemeProvider>
-            </Box>
-            </Box>
+                <EmptyBox emptyBoxStyles={{height: {xs: "20px", empatDuaLima: "40px"}}} />        
+                
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
+                    <Box sx={{width: "80%", display: "flex", justifyContent: "center",}}>
+                        <Typography variant='wassalamText'> Wassalamu'alaikum Wr. Wb.</Typography>
+                    </Box>
+                </Box>
 
-            <EmptyBox emptyBoxStyles={{height: "18px"}} />   
+                <EmptyBox emptyBoxStyles={{height: "18px"}} />   
 
-            <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
-                <Box sx={{width: "80%", display: "flex", justifyContent: "center",}}>
-                <ThemeProvider theme={theme}>
-                    <Typography variant='sectionHeader' style={{ boxSizing: "border-box"}}>Cintya & Handika</Typography>  
-                </ThemeProvider>    
-            </Box>
-            </Box>
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
+                    <Box sx={{width: "80%", display: "flex", justifyContent: "center",}}>
+                        <Typography variant='sectionHeader' style={{ boxSizing: "border-box"}}>Cintya & Handika</Typography>  
+                    </Box>
+                </Box>
 
-            <EmptyBox emptyBoxStyles={{height: {xs: "100px", md: "180px"}}} />
-        </Box>
+                <EmptyBox emptyBoxStyles={{height: {xs: "100px", md: "180px"}}} />
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 

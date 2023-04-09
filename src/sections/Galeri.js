@@ -22,15 +22,14 @@ const theme = createTheme({
 function Galeri () {
 
     return (
-        <Box id="galeri-section" sx={{boxSizing: "border-box", height: "100%", padding: "16px", backgroundColor: "#E8D3C3", textAlign: "center"}}>
-            <ThemeProvider theme={theme}>
-                <Typography variant='galeriTitle'>Galeri Foto</Typography>
-            </ThemeProvider>
-            
-            <EmptyBox emptyBoxStyles={{height: "24px"}}></EmptyBox>
-
-            <Slider />
-        </Box>        
+        <ThemeProvider theme={theme}>
+            <Box id="galeri-section" sx={{boxSizing: "border-box", height: "100%", padding: "16px", backgroundColor: "#E8D3C3", textAlign: "center"}}>
+                    <Typography variant='galeriTitle'>Galeri Foto</Typography>
+                <EmptyBox emptyBoxStyles={{height: "24px"}} />
+                <Slider />
+            </Box>      
+        </ThemeProvider>
+              
     )
 }
 

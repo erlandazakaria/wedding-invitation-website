@@ -22,51 +22,33 @@ function CountdownTimer ({ theme, remainingTime }) {
         marginRight: {custm: "14px" }
     }
     return (
-        <Box style={wrapperStyles}>
-            <Box sx={{height: "32px"}}></Box>
-            <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+            <Box style={wrapperStyles}>
+                <Box sx={{height: "32px"}}></Box>
                 <Box  sx={boxesContainerStyles}>
-                    
                     <Box sx={boxesStyles}>
-                    <ThemeProvider theme={theme}>
                         <Typography variant="numberAtCountdown">{remainingTime.day}</Typography>
-                    </ThemeProvider>
-                    <ThemeProvider theme={theme}>
                         <Typography variant='dateAtCountdown'>Hari</Typography>
-                    </ThemeProvider>
                     </Box>
 
                     <Box sx={boxesStyles}>
-                    <ThemeProvider theme={theme}>
                         <Typography variant="numberAtCountdown">{remainingTime.hours}</Typography>
-                    </ThemeProvider>
-                    <ThemeProvider theme={theme}>
                         <Typography variant='dateAtCountdown'>Jam</Typography>
-                    </ThemeProvider>
                     </Box>
 
                     <Box sx={boxesStyles}>
-                    <ThemeProvider theme={theme}>
                         <Typography variant="numberAtCountdown">{remainingTime.minutes}</Typography>
-                    </ThemeProvider>
-                    <ThemeProvider theme={theme}>
                         <Typography variant='dateAtCountdown'>Menit</Typography>
-                    </ThemeProvider>
                     </Box>
 
                     <Box sx={boxesStyles}>
-                    <ThemeProvider theme={theme}>
                         <Typography variant="numberAtCountdown">{remainingTime.seconds}</Typography>
-                    </ThemeProvider>
-                    <ThemeProvider theme={theme}>
                         <Typography variant='dateAtCountdown'>Detik</Typography>
-                    </ThemeProvider>
                     </Box>
-                    
                 </Box>    
-            </ThemeProvider>
-            
-        </Box>
+            </Box>    
+        </ThemeProvider>
+        
     )
 }
 
