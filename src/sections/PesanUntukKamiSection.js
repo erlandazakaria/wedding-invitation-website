@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import moment from 'moment/moment';
+import moment from 'moment';
 import 'moment/locale/id';
 import { Box, Typography, TextField,  MenuItem, FormControl, Button, Stack, Pagination, createTheme, ThemeProvider, useMediaQuery } from '@mui/material';
 import { useFormik } from 'formik';
