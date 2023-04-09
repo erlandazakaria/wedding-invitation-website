@@ -38,7 +38,7 @@ function HomeSection ({theme}) {
         
         setInterval(() => {
             let currentDate = new Date().getTime();
-            let difference = 1683783000000 - currentDate;
+            let difference = 1683783000000 - parseInt(currentDate, 10);
             let day = getDate(difference)
             let hours = getHour(difference)
             let minutes = getMinute(difference)
