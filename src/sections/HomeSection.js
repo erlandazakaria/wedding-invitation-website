@@ -6,7 +6,7 @@ import SaveTheDateButton from '../components/SaveTheDateButton';
 import '../App.css';
 
 
-const countDownDate = new Date("2023-05-11 12:30:00").getTime();
+const countDownDate = new Date(2023, 5, 11, 12, 30, 0).getTime();
 const saveTheDateButtonStyle = {
     boxStyles: {marginTop: {sm: "24px", md: "24px 0"}}, 
     buttonStyles: {padding: "4px 16px", textTransform: "capitalize", borderRadius: "8px", backgroundColor: "#424242"}
