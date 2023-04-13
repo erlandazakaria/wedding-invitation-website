@@ -93,7 +93,7 @@ function MempelaiSection () {
             <Box id="mempelai-section">
                 <Box sx={{height: "100%", backgroundImage: "url('./img/BAHAN-TEMA-08-NAMA-1-scaled-1.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
                     <Box sx={{ textAlign: "center",display: "flex",flexDirection: "column", justifyContent: "center", alignItems: "center"}}>   
-                        <Box sx={{height: {xs: "4vh", sm: "8vh", tujuhEnamDelapan: "10vh"}}}></Box>
+                        <Box sx={{height: {xs: "6vh", sm: "8vh", tujuhEnamDelapan: "10vh"}}}></Box>
                         <Box>
                             <Typography variant="assalamualaikumText">Assalamualaikum Wr. Wb. </Typography>                                
                         <EmptyBox theme={theme} emptyBoxStyles={{height: {xs: 0, tujuhEnamDelapan: "2vh"}}} />
@@ -185,7 +185,7 @@ function MempelaiSection () {
 
                     <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center"}}>          
                         <Box>
-                            <Typography variant="namaMempelaiText">Handika Dwiyanto Putra, S.Pd</Typography>    
+                            <Typography variant="namaMempelaiText">Handhika Dwiyanto Putra, S.Pd</Typography>    
      
                         </Box>
                         <Box sx={{display: "flex",justifyContent: "center",alignItems: "center"}}>

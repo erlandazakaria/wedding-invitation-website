@@ -8,7 +8,7 @@ function InvitationText ({ theme, backgroundColor}) {
                     <Typography variant='weInviteYou' >We invite you to celebrate our wedding</Typography>
                 </Box>
                 <Box style={{marginBottom: "8px"}}>
-                    <Typography variant='testText' style={{ boxSizing: "border-box"}}>Cintya & Handika</Typography>  
+                    <Typography variant='testText' style={{ boxSizing: "border-box"}}>Cintya & Handhika</Typography>  
                 </Box>
                 <Box style={{marginBottom: "8px"}}>
                     <Typography variant='weInviteYou' >Kamis, 11 Mei 2023</Typography>
