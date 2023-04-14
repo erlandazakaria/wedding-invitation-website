@@ -112,7 +112,7 @@ function UcapanTerimaKasih () {
 
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center"}}>
                     <Box sx={{width: "80%", display: "flex", justifyContent: "center",}}>
-                        <Typography variant='sectionHeader' style={{ boxSizing: "border-box"}}>Cintya & Handika</Typography>  
+                        <Typography variant='sectionHeader' style={{ boxSizing: "border-box"}}>Cintya & Handhika</Typography>  
                     </Box>
                 </Box>
 

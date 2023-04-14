@@ -68,7 +68,7 @@ function HomeSection ({theme}) {
                     <CountdownTimer theme={theme} remainingTime={remainingTime} />
                 </Box>
                 <Box sx={{height: {xs: "30px", sm: 0}}}></Box>
-                <Box sx={{boxSizing: "border-box", height: {xs: "100px", sm: "24vh"},width: "100%", backgroundColor: "#FFF7F5"}}>
+                <Box sx={{boxSizing: "border-box", height: {xs: "80px", sm: "24vh"},width: "100%", backgroundColor: "#FFF7F5"}}>
                     <img src='/img/Untitled.png'alt='wavy_divider_picture' height="100%" width="100%" />
                 </Box>
 

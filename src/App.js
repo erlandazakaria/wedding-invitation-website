@@ -222,7 +222,7 @@ function FrontPage ({ tamu, bukaUndanganHandler }) {
             </Box>
               
             {/* could be more simple than this by doing mapping on array that each index have variant, style, and text as key */}
-            <Typography variant='testText' sx={{ boxSizing: "border-box", color:"#9d7a5b", marginBottom: "1rem"}}>Cintya & Handika</Typography>  
+            <Typography variant='testText' sx={{ boxSizing: "border-box", color:"#9d7a5b", marginBottom: "1rem"}}>Cintya & Handhika</Typography>  
             <Typography variant='kepadaBapakIbu' sx={{ boxSizing: "border-box", color:"#6C6C6C", marginBottom: "1rem"}}>Kepada Bapak/Ibu/Saudara/i</Typography>
             
             {

@@ -54,7 +54,7 @@ function AcaraSection () {
         width: "100%", 
         backgroundColor: "rgba(255, 247, 245, 0.5)",
         boxShadow: "0px 10px 30px -5px rgba(0, 0, 0, 0.3)",
-        padding: "40px",
+        padding: "30px",
         display: "flex",
         flexDirection: "column",
         borderRadius: "24px",
@@ -67,9 +67,11 @@ function AcaraSection () {
                 {text: "Akad Nikah", variant: "acaraHeader"},
                 {text: "Kamis, 11 Mei 2023", variant: "hariDanTanggal"},
                 {text: "Pukul 08.00 WIB", variant: "tempatDanWaktu", haveMargin: true},
-                {text: "Tempat: Chapel Royal Garden Orchid", variant: "tempatDanWaktu"},
+                {text: "Tempat:", variant: "tempatDanWaktu"},
+                {text: "Chapel Royal Garden Orchid", variant: "tempatDanWaktu"},
                 {text: "Royal Orchids Garden Hotel & Condominiums", variant: "tempatDanWaktu"},
-                {text: "Jl. Indragiri No.4, Pesanggrahan, Kota Batu", variant: "tempatDanWaktu"},
+                {text: "Jl. Indragiri No.4, Pesanggrahan,", variant: "tempatDanWaktu"},
+                {text: "Kota Batu", variant: "tempatDanWaktu"},
             ]
         }, 
         {
@@ -78,8 +80,10 @@ function AcaraSection () {
                 {text: "Kamis, 11 Mei 2023", variant: "hariDanTanggal"},
                 {text: "Sesi 1: 13.00 - 15.00", variant: "tempatDanWaktu", haveMarginTop: true},
                 {text: "Sesi 2: 15.00 - 17.00", variant: "tempatDanWaktu", haveMargin: true},
-                {text: "Tempat: Arjuna Hall Royal Garden Orchid", variant: "tempatDanWaktu"},
-                {text: "Jl. Indragiri No.4, Pesanggrahan, Kota Batu", variant: "tempatDanWaktu"},
+                {text: "Tempat:", variant: "tempatDanWaktu"},
+                {text: "Arjuna Hall Royal Garden Orchid", variant: "tempatDanWaktu"},
+                {text: "Jl. Indragiri No.4, Pesanggrahan", variant: "tempatDanWaktu"},
+                {text: "Kota Batu", variant: "tempatDanWaktu"},
 
             ]
         }
